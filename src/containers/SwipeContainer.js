@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import '../layouts/SwipeContainer.css';
 
 class SwipeContainer extends Component {
   render()  {
   return (
-    <div>
-      <h1 className="swipe">SWIPEContainer</h1>
+    <div className="SwipeContainer">
+      <h1>SWIPEContainer</h1>
     </div>
     )
 

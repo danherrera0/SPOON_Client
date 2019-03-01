@@ -1,0 +1,29 @@
+.MainContainer{
+  border-style: solid;
+  border-color: green;
+  border-width: thick;
+padding: 15px;
+  	font-family: Avenir;
+    padding: 15px;
+  	display: grid;
+  	grid-template-areas:
+      "header header header"
+      "sidebar card card"
+      "footer footer footer";
+  	grid-template-rows: 100px 1fr 50px;
+  	grid-template-columns: 30% 1fr 18%;
+  	grid-gap: 5px;
+    height: 100vh;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
+    1px 3px 8px rgba(39, 44, 49, 0.03);
+
+
+}
+
+.footer{
+  background-color: #707070;
+  border-radius: 5px;
+  grid-area: footer;
+}

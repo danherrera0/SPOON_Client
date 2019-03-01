@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
 import Header from '../components/Header';
 import SidebarContainer from './SidebarContainer';
-import SwipeContainer from './SwipeContainer'
+import SwipeContainer from './SwipeContainer';
+import Footer from '../components/Footer';
+import '../layouts/MainContainer.css';
+
 
 class MainContainer extends Component {
   render () {
     console.log("hello");
     return (
-    <React.Fragment>
+    <div className="MainContainer">
 
     <Header />
     <SidebarContainer/>
     <SwipeContainer/>
+    <Footer />
 
-    </React.Fragment>)
+    </div>)
   }
 }
 
