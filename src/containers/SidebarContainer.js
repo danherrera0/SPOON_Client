@@ -7,7 +7,7 @@ import '../layouts/SidebarContainer.css';
 class SidebarContainer extends Component {
   render()  {
   return (
-    <div class="SidebarContainer">
+    <div className="SidebarContainer">
     <div className="SidebarHeader">
 
       <SidebarHeader

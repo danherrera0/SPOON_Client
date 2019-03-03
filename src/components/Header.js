@@ -5,7 +5,7 @@ class Header extends Component {
   render()  {
   return (
     <header className="MainHeader">
-       <h1>Let's Spoon <i class="fa fa-spoon"></i></h1>
+       <h1>Let's Spoon <i className="fa fa-spoon"></i></h1>
 
         <nav className="nav_menu">
           <ul>

@@ -3,17 +3,15 @@
   min-height: calc(100vh - 10.5rem);
   padding: 2rem;
   margin: 20px;
-
 }
 
 .SwipeCard{
   display: center;
-
+  color:black;
   grid-gap: 2em;
   padding: 50px;
-    }
+}
 
-
-    body {
-      background: #f1f1f1;
-    }
+body {
+  background: #f1f1f1;
+}

@@ -3,14 +3,19 @@ import '../layouts/SwipeContainer.css';
 import SwipeCard from "../components/SwipeCard"
 
 class SwipeContainer extends Component {
-  render()  {
+  state={
+    currentCard: 0,
+  }
+
+  render(){
+
+
+
   return (
     <div className="SwipeContainer">
-      <h1>SWIPEContainer</h1>
-      <SwipeCard />
+      {<SwipeCard restaurant={this.props.restaurants}/>}
     </div>
     )
-
     }
   }
 

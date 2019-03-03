@@ -7,14 +7,30 @@ import '../layouts/MainContainer.css';
 
 
 class MainContainer extends Component {
+
+  state={
+    restaurants:[],
+    shortlist:[],
+  }
+
+  componentDidMount(){
+    fetch("http://localhost:3000/api/v1/restaurants")
+    .then(r=>r.json())
+    .then(fetchedRes=>{
+      this.setState({
+        restaurants:fetchedRes,
+        shortlist:fetchedRes.slice(0,1)
+      })
+    })
+  }
+
   render () {
-    console.log("hello");
     return (
     <div className="MainContainer">
 
     <Header />
     <SidebarContainer/>
-    <SwipeContainer/>
+    <SwipeContainer restaurants={this.state.shortlist}/>
     <Footer />
 
     </div>)
