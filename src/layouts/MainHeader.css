@@ -1,7 +1,41 @@
 .MainHeader{
-  border-style: dotted;
-  border-color: blue;
-  background: #D3D3D3;
-border-radius: 5px;
-grid-area: header;
+  grid-column: 1 / 4;
+    grid-row: 1;
+    color: ;
+    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.2);
+
+  /* position: fixed; */
+   background: #f4f8fb;
+      left:0;
+      right:0;
+      top:0;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+}
+
+.nav_menu ul {
+display: flex;
+width: 100%;
+/*   flex-direction: row; */
+margin-top: .5rem;
+
+
+}
+
+.nav_menu li {
+margin-left: 0.5rem;
+}
+
+.nav_menu li:hover,
+.nav_menu li:focus {
+cursor: pointer;
+color: white;
+}
+
+.nav_menu a {
+padding: .5rem 1.5rem;
+font-size: 1 rem;
+
+text-decoration: none;
 }
