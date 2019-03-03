@@ -12,8 +12,9 @@ class RestaurantCard extends Component {
       <div className="RestaurantCard">
       <h3>Restuarant Card</h3>
       <RestaurantDetails />
-      <Map />
+
       </div>
+      <Map />
     </div>
     )
 

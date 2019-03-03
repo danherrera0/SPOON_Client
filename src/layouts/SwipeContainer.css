@@ -2,6 +2,8 @@
   grid-column:  2/4;
   min-height: calc(100vh - 10.5rem);
   padding: 2rem;
+  margin: 20px;
+
 }
 
 .SwipeCard{

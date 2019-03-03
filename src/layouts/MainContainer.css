@@ -1,26 +1,11 @@
 .MainContainer{
-  padding: 15px;
+  padding: px;
   font-family: Avenir;
   display: grid;
   grid-template-columns: 1fr 1fr 0.75fr;
   grid-template-rows: auto;
   width: 100%;
   margin: 0 auto;
-
-  	/* display: grid;
-  	grid-template-areas:
-      "header header header"
-      "sidebar card card"
-      "footer footer footer";
-  	grid-template-rows: 100px 1fr 50px;
-  	grid-template-columns: 30% 1fr 18%;
-  	grid-gap: 5px;
-    height: 100vh;
-    margin: 10px;
-    border-radius: 5px;
-    box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
-    1px 3px 8px rgba(39, 44, 49, 0.03); */
-
 
 }
 
@@ -31,7 +16,7 @@
 
 body{
   background: #f5f7fa;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Oxygen', sans-serif;
   font-weight: 300;
   color:  #7d7d7d;
   font-size: 15px;
@@ -40,12 +25,13 @@ body{
 
 
 h1, h2, h3{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+
 }
 
 h1{
-  color: #DD5555;
-  font-size: 25px;
+  color: white;
+  font-size: 22px;
 }
 
 h2{
@@ -60,16 +46,17 @@ h3{
 
 p{
   text-align: justify;
+  font-size: 10px;
 }
 
 a{
-  color: #ccc;
+  color: white;
   text-decoration: none;
 }
 
 a:hover{
-  color: #DD5555;
-  text-decoration: none;
+  font-size: 20px;
+  text-decoration: bold;
 }
 
 
