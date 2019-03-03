@@ -2,7 +2,7 @@
   border-style: solid;
   border-color: black;
   border-width: thick;
-  background: #C9BFBF;
+  background: #D3D3D3;
   border-radius: 5px;
 	grid-area: sidebar;
   border: 3 px;
@@ -11,6 +11,7 @@
 }
 
 .SidebarHeader{
+  background: #D3D3D3;
   border-style: solid;
   border-color: yellow;
 }
