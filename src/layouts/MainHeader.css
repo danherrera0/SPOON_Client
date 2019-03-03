@@ -1,7 +1,7 @@
 .MainHeader{
-  /* border-style: dotted;
+  border-style: dotted;
   border-color: blue;
-  background: #D3D3D3; */
+  background: #D3D3D3;
 border-radius: 5px;
 grid-area: header;
 }

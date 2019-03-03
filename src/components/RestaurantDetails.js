@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+
 import '../layouts/SidebarContainer.css';
 
 class RestaurantDetails extends Component {
@@ -8,6 +10,8 @@ class RestaurantDetails extends Component {
       <div className="RestaurantDetails">
       <h3>Restuarant Details</h3>
       </div>
+
+
     </div>
     )
 

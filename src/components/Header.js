@@ -5,7 +5,14 @@ class Header extends Component {
   render()  {
   return (
     <header className="MainHeader">
-      <h1 >LET'S SPOON LOGO</h1>
+      <h1> LET'S SPOON LOGO</h1>
+
+        <nav className="nav_menu">
+          <ul>
+            <li><a href="https://github.com/">about</a></li>
+            <li><a href="https://localhost/3000/">signout</a></li>
+          </ul>
+        </nav>
     </header>
     )
 

@@ -1,7 +1,14 @@
 .SwipeContainer{
   border-style: dotted;
   border-color: red;
-  background: #D3D3D3;
+  background: #ABABAB;
 border-radius: 5px;
 grid-area: card;
 }
+
+.SwipeCard{
+  display: center;
+
+  grid-gap: 2em;
+  padding: 50px;
+    }
