@@ -8,7 +8,7 @@ class RestaurantCard extends Component {
   return (
     <div>
       <div className="RestaurantCard">
-      <h3>Restuarant Card</h3>
+      <h3>Restuarant Cardd</h3>
       <RestaurantDetails />
       </div>
     </div>
