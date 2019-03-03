@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import RestaurantDetails from './RestaurantDetails'
 import '../layouts/SidebarContainer.css';
 
+import Map from './Map'
+
 
 class RestaurantCard extends Component {
   render()  {
@@ -10,7 +12,9 @@ class RestaurantCard extends Component {
       <div className="RestaurantCard">
       <h3>Restuarant Cardd</h3>
       <RestaurantDetails />
+
       </div>
+      <Map />
     </div>
     )
 

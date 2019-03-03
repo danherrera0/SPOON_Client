@@ -9,11 +9,13 @@ class SidebarContainer extends Component {
   return (
     <div class="SidebarContainer">
     <div className="SidebarHeader">
-      <SidebarHeader />
-      <h1 className="sidebar">Side Bar Container</h1>
+
+      <SidebarHeader
+         />
       </div>
       <div className="SideBar">
       <RestaurantCard />
+
 
       </div>
     </div>
