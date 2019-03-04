@@ -15,6 +15,8 @@ class RestaurantDetails extends Component {
       <button onClick={this.props.goBack} > Go back </button>
 
         <Map
+        lat={this.props.restaurant.coordinates.latitude}
+        lng={this.props.restaurant.coordinates.longitude}
          />
       </div>
 
