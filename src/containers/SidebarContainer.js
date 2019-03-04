@@ -1,11 +1,31 @@
 import React, { Component } from 'react';
 import RestaurantCard from '../components/RestaurantCard'
 import SidebarHeader from '../components/SidebarHeader'
+import RestaurantDetails from '../components/RestaurantDetails'
 
 import '../layouts/SidebarContainer.css';
 
 class SidebarContainer extends Component {
+
+  state={
+    clicked:false,
+    chosenRestaurant:{},
+  }
+  onClick=(e, restaurant)=>{
+    this.setState({
+      clicked:true,
+      chosenRestaurant:restaurant,
+    })
+  }
+
+  goBack=()=>{
+    this.setState({
+      chosenRestaurant:{}
+    })
+  }
+
   render()  {
+    console.log(this.state.chosenRestaurant);
   return (
     <div className="SidebarContainer">
     <div className="SidebarHeader">
@@ -14,8 +34,14 @@ class SidebarContainer extends Component {
          />
       </div>
       <div className="SideBar">
-      <RestaurantCard />
 
+      {(Object.keys(this.state.chosenRestaurant).length > 0)
+        ?
+        <RestaurantDetails goBack={this.goBack} restaurant={this.state.chosenRestaurant}/>
+        :
+        this.props.likedRestaurants.map(restaurant=>{
+        return <RestaurantCard clickHandler={this.onClick} restaurant={restaurant}/>
+      })}
 
       </div>
     </div>

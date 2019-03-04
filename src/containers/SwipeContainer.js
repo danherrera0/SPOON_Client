@@ -10,7 +10,7 @@ class SwipeContainer extends Component {
 
   render(){
 
-  console.log(this.props.shortlist);
+
 
   return (
     <div className="SwipeContainer">

@@ -12,11 +12,11 @@
 
 
 
-
 .SidebarHeader{
 
 
 }
+
 
 .RestaurantCard{
   background: white;
@@ -32,7 +32,8 @@
 
 }
 
-.RestaurantDetails{
-  border-style: solid;
-  border-color: red;
+.RestaurantDetails img {
+    width: 50px;
+    height: 50px;
+
 }

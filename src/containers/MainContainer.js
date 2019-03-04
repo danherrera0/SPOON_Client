@@ -38,6 +38,7 @@ class MainContainer extends Component {
   }
 
   like=(e, restaurant)=>{
+    console.log(e, restaurant)
     let newStart = this.state.startIdx +1
     let newEnd = this.state.endIdx +1
     this.setState({
@@ -49,10 +50,11 @@ class MainContainer extends Component {
   }
 
   render () {
+    console.log(this.state.likedRestaurants)
     return (
     <div className="MainContainer">
     <Header />
-    <SidebarContainer/>
+    <SidebarContainer likedRestaurants={this.state.likedRestaurants}/>
     <SwipeContainer like={this.like} dislike={this.dislike} shortlist={this.state.shortlist}/>
     <Footer />
     </div>

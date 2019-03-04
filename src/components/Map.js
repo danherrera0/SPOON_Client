@@ -22,10 +22,10 @@ class Map extends Component {
 
   static defaultProps = {
     center: {
-      lat: 40.71427,
-      lng: -74.00597
+      // lat: this.props.latitude,
+      // lng: this.props.longitude,
     },
-    zoom: 18
+    zoom: 15
   };
 
   render() {
@@ -39,8 +39,7 @@ class Map extends Component {
           defaultZoom={this.props.zoom}
         >
         <MapMarker
-        lat={40.71427}
-        lng={-74.00597}
+      
         />
         </GoogleMapReact>
       </div>
