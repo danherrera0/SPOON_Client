@@ -1,4 +1,4 @@
-# Let's Spoon - Client
+# Spoon
 
 In the project directory, you can run:
 
