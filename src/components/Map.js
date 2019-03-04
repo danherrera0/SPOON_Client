@@ -32,7 +32,7 @@ class Map extends Component {
     return (
       // set the container height explicitly
       <div style={{ flex: '0 0 35rem' }}>
-      <div className="" style={{ height: '250px', width: '100%', position: 'center', top: '25px' }}>
+      <div className="" style={{ height: '250px', width: '100%', position: 'center', top: '25px'}}>
         <GoogleMapReact
           bootstrapURLKeys={{key: "AIzaSyAmTuAX-MqRaEhM_z1ZlTPcUHul78S6nXs" }}
           defaultCenter={this.props.center}
