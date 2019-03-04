@@ -11,6 +11,9 @@ class MainContainer extends Component {
   state={
     restaurants:[],
     shortlist:[],
+    startIdx: 0,
+    endIdx: 1,
+    likedRestaurants:[],
   }
 
   componentDidMount(){
@@ -19,21 +22,41 @@ class MainContainer extends Component {
     .then(fetchedRes=>{
       this.setState({
         restaurants:fetchedRes,
-        shortlist:fetchedRes.slice(0,1)
+        shortlist:fetchedRes.slice(this.state.startIdx, this.state.endIdx)
       })
+    })
+  }
+
+  dislike=()=>{
+    let newStart = this.state.startIdx +1
+    let newEnd = this.state.endIdx +1
+    this.setState({
+      startIdx: this.state.startIdx +1,
+      endIdx: this.state.endIdx +1,
+      shortlist: this.state.restaurants.slice(newStart, newEnd)
+    })
+  }
+
+  like=(e, restaurant)=>{
+    let newStart = this.state.startIdx +1
+    let newEnd = this.state.endIdx +1
+    this.setState({
+      startIdx: this.state.startIdx +1,
+      endIdx: this.state.endIdx +1,
+      shortlist: this.state.restaurants.slice(newStart, newEnd),
+      likedRestaurants : [...this.state.likedRestaurants, restaurant]
     })
   }
 
   render () {
     return (
     <div className="MainContainer">
-
     <Header />
     <SidebarContainer/>
-    <SwipeContainer restaurants={this.state.shortlist}/>
+    <SwipeContainer like={this.like} dislike={this.dislike} shortlist={this.state.shortlist}/>
     <Footer />
-
-    </div>)
+    </div>
+  )
   }
 }
 

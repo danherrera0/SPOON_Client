@@ -5,17 +5,19 @@
     box-shadow: 0 1px 8px 0;
     box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
     color: white;
-
-
-   background: linear-gradient(262deg, #ff7854, #fd267d);
-      left:0;
-      right:0;
-      top:0;
+    background: linear-gradient(262deg, #ff7854, #fe0f0fdb);
+    left:0;
+    right:0;
+    top:0;
     display: flex;
     flex-direction: row;
     padding: 1rem;
 }
 
+.logo nav_menu{
+  margin-left: 50%;
+  margin-right: 50%;
+}
 .nav_menu ul {
 display: flex;
 width: 100%;

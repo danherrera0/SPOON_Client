@@ -5,18 +5,24 @@ import '../layouts/SwipeContainer.css';
 
 class SwipeCard extends Component {
   render()  {
-    console.log(this.props.restaurant);
+    console.log(this.props);
+    console.log(this.props.restaurant[0].location1.display_address.join())
+    console.log(
+  )
+
   return (
     <div>
       <div className="SwipeCard">
-      <h3>{this.props.restaurant.name}</h3>
-      <img src = "https://www.tri-cityherald.com/customer-service/faq/readers-choice/tktlqu/picture212621614/alternates/FREE_1140/PC18-five%20guys"  style = {{width: "251px",  height: "201px"}} />
-      <RestaurantDetails/>
+      <h2>{this.props.restaurant[0].name}</h2>
+      <img src = {this.props.restaurant[0].image} style = {{width: "251px",  height: "201px"}} />
+      <p> Rating: {this.props.restaurant[0].rating}</p>
+      <p> Tags: {this.props.restaurant[0].tags.map(tag=>{
+        return tag.alias}).join()}</p>
+      <p>{this.props.restaurant[0].location1.display_address.join()}</p>
       </div>
       <div className ="ButtonContainer">
-        <button className="Dislike">Not My Taste</button>
-        <button className="Starred">Must Go</button>
-        <button className="Love">Put It On My Plate</button>
+        <button onClick={this.props.dislike} className="Dislike">Not My Taste</button>
+        <button onClick={(this.props.restaurant)=> this.props.like()} className="Love">Put It On My Plate</button>
       </div>
     </div>
     )
