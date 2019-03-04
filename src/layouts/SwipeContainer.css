@@ -7,10 +7,19 @@
 }
 
 .SwipeCard{
-  display: center;
 
-  grid-gap: 2em;
-  padding: 50px;
+background: black;
+borderRadius: 3;
+width: "300px";
+height: "350px";
+cursor: "pointer";
+userSelect: "none";
+position: "absolute"; 
+display: "flex";
+alignItems: "center";
+boxShadow: "5px";
+justifyContent: "center";
+top: 0
     }
 
 
