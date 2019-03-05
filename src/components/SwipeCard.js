@@ -1,23 +1,19 @@
 import React, { Component } from 'react';
 import RestaurantDetails from "./RestaurantDetails"
+
 import '../layouts/SwipeContainer.css';
 
-import Swipeable from "react-swipy";
 import Button from './Button'
 
 class SwipeCard extends Component {
   render()  {
-    console.log(this.props);
-    console.log(this.props.restaurant[0].location1.display_address.join())
-    console.log(
-  )
+
 
   return (
     <div>
 
     <div style={{position: "absolute", width: "400px", height: "550px"}}>
 
-      <Swipeable>
 
       <div className="SwipeCard">
       <img className="RestImage" src = {this.props.restaurant[0].image} style = {{width: "352px",  height: "300px", borderRadius: "0.7rem"}} />
@@ -34,7 +30,6 @@ class SwipeCard extends Component {
         <h1 style={{marginLeft:"50"}}>Put It On My Plate</h1>
       </div>
 
-      </Swipeable>
     </div>
 
   </div>
