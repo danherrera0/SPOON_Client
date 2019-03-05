@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Map from './Map'
+import MyMap from './MyMap'
 
 import '../layouts/SidebarContainer.css';
 
@@ -14,9 +14,8 @@ class RestaurantDetails extends Component {
       <p> Address:{this.props.restaurant.location1.display_address} </p>
       <button onClick={this.props.goBack} > Go back </button>
 
-        <Map
-        lat={this.props.restaurant.coordinates.latitude}
-        lng={this.props.restaurant.coordinates.longitude}
+        <MyMap restaurant={this.props.restaurant}
+
          />
       </div>
 
