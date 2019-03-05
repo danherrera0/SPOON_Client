@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
+
 import '../layouts/MainHeader.css'
 
 class Header extends Component {
@@ -10,8 +12,7 @@ class Header extends Component {
 
         <nav className="nav_menu">
           <ul>
-            <li><a href="https://github.com/">about</a></li>
-            <li><a href="https://localhost/3000/">signout</a></li>
+            <Link to = "/" className="logout"> Log out </Link>
           </ul>
         </nav>
     </header>
