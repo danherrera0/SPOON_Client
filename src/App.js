@@ -10,13 +10,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-<<<<<<< HEAD
-          <MainContainer/>
-=======
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/spoon" component={MainContainer} />
->>>>>>> dania
 
       </Switch>
       </div>
