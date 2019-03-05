@@ -4,6 +4,7 @@ import MainContainer from './containers/MainContainer'
 import './App.css';
 import Home from './Home'
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
         <Route exact path="/spoon" component={MainContainer} />
 
       </Switch>
+      <Footer />
       </div>
     );
   }

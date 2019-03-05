@@ -8,16 +8,13 @@ class Header extends Component {
   return (
     <header className="MainHeader">
       <img className="logo" src={process.env.PUBLIC_URL + '/logo.png'} />
-
-
-        <nav className="nav_menu">
-          <ul>
-            <Link to = "/" className="logout"> Log out </Link>
-          </ul>
+      <nav className="nav_menu">
+        <ul>
+          <Link to = "/" className="logout"> Log out </Link>
+        </ul>
         </nav>
     </header>
     )
-
     }
   }
 

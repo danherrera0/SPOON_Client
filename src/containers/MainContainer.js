@@ -14,6 +14,7 @@ class MainContainer extends Component {
     startIdx: 1,
     endIdx: 2,
     likedRestaurants:[],
+    loaded:false,
   }
 
   removeRest = (e, restaurant) => {
@@ -25,6 +26,18 @@ class MainContainer extends Component {
     });
 
   }
+    //after the user logs in, we get their user id to perform a fetch request for their matched restaurants
+    userUrl=()=>{
+      fetch(this.props.url)
+      .then(r=>r.json())
+      .then(user => {
+        this.setState({
+        likedRestaurants: user.restaurants,
+        loaded:true,
+        })
+        this.props.history.push(`/spoon`)
+      })
+    } //need to invoke userUrl
 
   componentDidMount(){
     fetch("http://localhost:3000/api/v1/restaurants")
@@ -48,6 +61,7 @@ class MainContainer extends Component {
   }
 
   like=(e, restaurant)=>{
+    // create a post request page
     console.log(e, restaurant)
     let newStart = this.state.startIdx +1
     let newEnd = this.state.endIdx +1
@@ -60,7 +74,11 @@ class MainContainer extends Component {
   }
 
   render () {
-
+    // if(this.state.loaded){
+    //   return null
+    // }else{
+    //  this.userUrl()
+    // }
     return (
     <div className="MainContainer">
     <Header />
@@ -69,7 +87,6 @@ class MainContainer extends Component {
       removeRest={this.removeRest}
       />
     <SwipeContainer like={this.like} dislike={this.dislike} shortlist={this.state.shortlist}/>
-    <Footer />
     </div>
   )
   }
