@@ -1,4 +1,5 @@
 .SidebarContainer{
+  font-family: 'Open Sans', sans-serif;
   grid-column: 1;
   grid-row: 2;
   background: white;
@@ -36,7 +37,6 @@
   	border-radius: 3.6rem;
   	cursor: pointer;
   	display: inline-block;
-
   	height: 3.6rem;
   	/* line-height: 3.6rem; */
   	margin: 0 5px;
@@ -48,47 +48,35 @@
   .showDetailsBut:hover {
 	/* background-color: red; */
   }
-  /* Circle */
-  /* .showDetailsBut{
-  	border-radius: 0;
-  	display: block;
-  	height: 0;
-  	left: 50%;
-  	margin: 0;
-  	position: absolute;
-  	top: 50%;
-  	-webkit-transition: all 0.3s;
-  	   -moz-transition: all 0.3s;
-  	     -o-transition: all 0.3s;
-  	        transition: all 0.3s;
-  	width: 0; */
-/*
-} */
-
-
-.SidebarHeader{
-
-
-}
-
 
 .RestaurantCard{
   background: white;
-       border-left: 1em solid #8a8a8a;
-       border-color: #f53803;
-       border-radius: 0.5rem;
-       box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
-       display: flex;
-       justify-content: space-between;
-       padding: 1rem;
-       margin: 0.5rem auto;
-       width: 25rem;
-
-
+   border-left: 1em solid #8a8a8a;
+   border-color: #f53803;
+   border-radius: 0.5rem;
+   box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+   display: flex;
+   justify-content: space-between;
+   padding: 1rem;
+   margin: 0.5rem auto;
+   width: 25rem;
 }
 
 .RestaurantDetails img {
-    width: 50px;
-    height: 50px;
-
+    width: 150px;
+    height: 150px;
+    border-radius: 80px;
+    border-style: double;
+    border-width: thick;
+    border-color: grey;
+    padding: 2.5%;
 }
+
+/* .resImg{
+  background-image: url("https://images.crateandbarrel.com/is/image/Crate/TondoRoundPlatter12inSHF15/?$web_product_hero$&160203173054&wid=625&hei=625");
+  background-position: center;
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
+  border-radius: 80px;
+
+} */

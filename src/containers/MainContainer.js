@@ -4,6 +4,8 @@ import SidebarContainer from './SidebarContainer';
 import SwipeContainer from './SwipeContainer';
 import Footer from '../components/Footer';
 import '../layouts/MainContainer.css';
+import Rater from 'react-rater'
+import 'react-rater/lib/react-rater.css'
 
 
 class MainContainer extends Component {

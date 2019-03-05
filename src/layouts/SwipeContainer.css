@@ -1,14 +1,4 @@
 .SwipeContainer{
-  grid-column:  2/4;
-  min-height: calc(100vh - 10.5rem);
-  padding: 2rem;
-  margin: 20px;
-
-  /* background-color: white;
-  box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
-      1px 3px 8px rgba(39, 44, 49, 0.03);
-      margin: 20px; */
-
 
 }
 
@@ -20,32 +10,34 @@ h1{
 }
 .SwipeCard{
   border-color: #f53803;
-  border-radius: 0.5rem;
+  border-radius: 15px;
   box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
-
-  /* border-radius: 3;
-  background-color: black; */
-
-  /* 375x520 */
-  width: "355px";
-  height: "580px";
-  cursor: "pointer";
-  user-select: "none";
-  position: "absolute";
-  display: "flex";
-  align-items: "center";
-  justify-content: "center";
+  width: 300px;
+  height: 500px;
+  cursor: pointer;
+  user-select: none;
+  /* position: "absolute"; */
+  /* display: "flex"; */
+  align-items: center;
+  justify-content: center;
   background-color: white;
   box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
       1px 3px 8px rgba(39, 44, 49, 0.03);
       margin: 20px;
-  top: 0
+  top: 0;
+  padding:2%;
 }
 
 .RestImage {
-  width: "350px";
-  height: "200px";
+  width: 250px;
+  height: 200px;
+  border-radius: 15px;
 }
+
 body {
   background: #f1f1f1;
+}
+
+.react-rater-star.is-disabled.is-active{
+   color: #fc6;
 }
