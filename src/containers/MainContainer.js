@@ -11,8 +11,8 @@ class MainContainer extends Component {
   state={
     restaurants:[],
     shortlist:[],
-    startIdx: 0,
-    endIdx: 1,
+    startIdx: 1,
+    endIdx: 2,
     likedRestaurants:[],
   }
 

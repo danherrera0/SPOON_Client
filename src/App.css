@@ -22,3 +22,12 @@
 .App-link {
   color: #61dafb;
 }
+
+.logout{
+  color:black;
+}
+
+input{
+  border-style: solid;
+  border-width: thin;
+}
