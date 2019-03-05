@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import MyMap from './MyMap'
+import Rater from 'react-rater'
+import 'react-rater/lib/react-rater.css'
 
 import '../layouts/SidebarContainer.css';
 
@@ -13,9 +15,13 @@ class RestaurantDetails extends Component {
         <div className="resImg">
         <img src={this.props.restaurant.image} />
         </div>
+        <h3> {this.props.restaurant.price} </h3>
+        <div className="react-rater-star"><b>Rating: <Rater total={5} rating={this.props.restaurant.rating} interactive={false}/></b></div>
+        <h4> Tags: {this.props.restaurant.tags.map(tag=>{
+          return tag.alias}).join()}</h4>
         <h3> Address:{this.props.restaurant.location1.display_address} </h3>
-        <button onClick={this.props.goBack} > Go back </button>
-          <MyMap restaurant={this.props.restaurant}/>
+          <MyMap restaurant={this.props.restaurant}/><br/>
+          <button onClick={this.props.goBack} > Go back </button>
         </div>
       </div>
       )

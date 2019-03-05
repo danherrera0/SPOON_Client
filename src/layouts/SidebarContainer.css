@@ -1,14 +1,20 @@
 .SidebarContainer{
   font-family: 'Open Sans', sans-serif;
+  margin-left: 7%;
+  margin-right: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
   grid-column: 1;
   grid-row: 2;
   background: white;
- color: grey;
+  color: grey;
   padding: 2rem;
   box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
       1px 3px 8px rgba(39, 44, 49, 0.03);
-      margin: 20px;
+}
 
+.SideBar{
+  width:400px;
 }
 
 .leaflet-container {
@@ -16,7 +22,6 @@
     width: 100%;
     margin: 0 auto;
 }
-
 
 #img-profile{
   width: 65px;
@@ -39,7 +44,7 @@
   	display: inline-block;
   	height: 3.6rem;
   	/* line-height: 3.6rem; */
-  	margin: 0 5px;
+  	margin: 20px;
   	position: relative;
   	text-align: center;
   	width: 3.6rem;
@@ -57,9 +62,10 @@
    box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
    display: flex;
    justify-content: space-between;
-   padding: 1rem;
-   margin: 0.5rem auto;
-   width: 25rem;
+   padding: 10px;
+   margin-bottom: 5%;
+   width: 400px;
+   height: 95px;
 }
 
 .RestaurantDetails img {
