@@ -5,7 +5,7 @@ import '../layouts/SidebarContainer.css';
 
 class RestaurantDetails extends Component {
   render()  {
-
+    console.log(this.props.restaurant.name);
   return (
     <div>
       <div className="RestaurantDetails">

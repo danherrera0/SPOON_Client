@@ -2,21 +2,7 @@ import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react'
 import MapMarker from './MapMarker'
 
-// const MapMarker = ({ text }) => (
-//   <div style={{
-//     color: 'white',
-//     background: 'grey',
-//     padding: '15px 15px',
-//     display: 'inline-flex',
-//     textAlign: 'center',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//     borderRadius: '100%',
-//     transform: 'translate(-50%, -50%)'
-//   }}>
-//     {text}
-//   </div>
-// );
+
 class Map extends Component {
 
 
@@ -26,7 +12,7 @@ class Map extends Component {
       lng: -74.00597
 
     },
-    zoom: 18
+    zoom: 15
   };
 
   render() {

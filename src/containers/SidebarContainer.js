@@ -23,9 +23,25 @@ class SidebarContainer extends Component {
       chosenRestaurant:{}
     })
   }
+// (Object.keys(this.state.chosenRestaurant)
+//   removeRest: (restaurant) => {
+//   const newRest = this.state.chosenRestaurant
+//   this.setState({
+//
+//   })
+// }
 
+// delete rest use filter to change array
+// pass in state object
+// removeRest = (e, restaurant) => {
+//   console.log(this.state.likedRestaurants)
+//   // this.setState({
+//   //   chosenRestaurant: [...this.state.likedRestaurants.filter(likedRestaurant => likedRestaurant.id !== this.state.chosenRestaurant.id)]
+//   // });
+//
+// }
   render()  {
-    console.log(this.state.chosenRestaurant);
+
   return (
     <div className="SidebarContainer">
     <div className="SidebarHeader">
@@ -40,7 +56,12 @@ class SidebarContainer extends Component {
         <RestaurantDetails goBack={this.goBack} restaurant={this.state.chosenRestaurant}/>
         :
         this.props.likedRestaurants.map(restaurant=>{
-        return <RestaurantCard clickHandler={this.onClick} restaurant={restaurant}/>
+        return (
+          <RestaurantCard
+          clickHandler={this.onClick}
+          removeRest={this.props.removeRest}
+          restaurant={restaurant}  />
+        )
       })}
 
       </div>

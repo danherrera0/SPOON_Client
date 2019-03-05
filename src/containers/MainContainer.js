@@ -16,6 +16,16 @@ class MainContainer extends Component {
     likedRestaurants:[],
   }
 
+  removeRest = (e, restaurant) => {
+    console.log(this.state.likedRestaurants)
+    console.log(restaurant.id);
+    let newChosen = this.state.likedRestaurants.filter(likedRestaurant => likedRestaurant.id != restaurant.id)
+    this.setState({
+      likedRestaurants: newChosen
+    });
+
+  }
+
   componentDidMount(){
     fetch("http://localhost:3000/api/v1/restaurants")
     .then(r=>r.json())
@@ -50,11 +60,14 @@ class MainContainer extends Component {
   }
 
   render () {
-    console.log(this.state.likedRestaurants)
+
     return (
     <div className="MainContainer">
     <Header />
-    <SidebarContainer likedRestaurants={this.state.likedRestaurants}/>
+    <SidebarContainer
+      likedRestaurants={this.state.likedRestaurants}
+      removeRest={this.removeRest}
+      />
     <SwipeContainer like={this.like} dislike={this.dislike} shortlist={this.state.shortlist}/>
     <Footer />
     </div>

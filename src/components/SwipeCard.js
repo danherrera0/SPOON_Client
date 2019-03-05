@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import RestaurantDetails from "./RestaurantDetails"
 import '../layouts/SwipeContainer.css';
 
+import Swipeable from "react-swipy";
+import Button from './Button'
 
 class SwipeCard extends Component {
   render()  {
@@ -12,9 +14,14 @@ class SwipeCard extends Component {
 
   return (
     <div>
+
+    <div style={{position: "absolute", width: "400px", height: "550px"}}>
+
+      <Swipeable>
+
       <div className="SwipeCard">
-      <h2>{this.props.restaurant[0].name}</h2>
-      <img src = {this.props.restaurant[0].image} style = {{width: "251px",  height: "201px"}} />
+      <img className="RestImage" src = {this.props.restaurant[0].image} style = {{width: "352px",  height: "300px", borderRadius: "0.7rem"}} />
+          <h1 style = {{ color: "#f6d365"}}>{this.props.restaurant[0].name}</h1>
       <p> {this.props.restaurant[0].price} </p>
       <p> Rating: {this.props.restaurant[0].rating}</p>
       <p> Tags: {this.props.restaurant[0].tags.map(tag=>{
@@ -22,10 +29,15 @@ class SwipeCard extends Component {
       <p>{this.props.restaurant[0].location1.display_address.join()}</p>
       </div>
       <div className ="ButtonContainer">
-        <button onClick={this.props.dislike} className="Dislike">Not My Taste</button>
-        <button onClick={(e)=> this.props.like(e,this.props.restaurant[0])}  className="Love">Put It On My Plate</button>
+        <Button onClick={this.props.dislike} className="Dislike">  Not My Taste  </Button>
+        <Button onClick={(e)=> this.props.like(e,this.props.restaurant[0])}  className="Love"><i className="fa fa-heart fa-2x" style={{color:"red"}}></i></Button>
+        <h1 style={{marginLeft:"50"}}>Put It On My Plate</h1>
       </div>
+
+      </Swipeable>
     </div>
+
+  </div>
     )
   }
   }

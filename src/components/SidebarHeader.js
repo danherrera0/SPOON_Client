@@ -5,12 +5,12 @@ import '../layouts/SidebarContainer.css';
 class SidebarHeader extends Component {
   render()  {
   return (
-    <div>
+
     <div className="SideCard">
-    <h3>SidebarHeader </h3>
+    <h1> My Plate </h1>
 
     </div>
-    </div>
+
     )
 
     }

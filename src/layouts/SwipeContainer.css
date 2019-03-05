@@ -4,20 +4,48 @@
   padding: 2rem;
   margin: 20px;
 
+  /* background-color: white;
+  box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
+      1px 3px 8px rgba(39, 44, 49, 0.03);
+      margin: 20px; */
+
+
 }
 
 h1{
   color:black;
 }
-
+.RestImage {
+  background-size:100% 100%;
+}
 .SwipeCard{
+  border-color: #f53803;
+  border-radius: 0.5rem;
+  box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
 
-  display: center;
-  color:black;
-  grid-gap: 2em;
-  padding: 50px;
+  /* border-radius: 3;
+  background-color: black; */
+
+  /* 375x520 */
+  width: "355px";
+  height: "580px";
+  cursor: "pointer";
+  user-select: "none";
+  position: "absolute";
+  display: "flex";
+  align-items: "center";
+  justify-content: "center";
+  background-color: white;
+  box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
+      1px 3px 8px rgba(39, 44, 49, 0.03);
+      margin: 20px;
+  top: 0
 }
 
+.RestImage {
+  width: "350px";
+  height: "200px";
+}
 body {
   background: #f1f1f1;
 }

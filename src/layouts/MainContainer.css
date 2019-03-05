@@ -30,7 +30,8 @@ h1, h2, h3{
 }
 
 h1{
-  color: black;
+  color: grey;
+  shadow: 5px;
   font-size: 22px;
 }
 

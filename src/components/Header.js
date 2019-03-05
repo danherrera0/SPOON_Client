@@ -5,7 +5,8 @@ class Header extends Component {
   render()  {
   return (
     <header className="MainHeader">
-       <h1 className="logo">Let's Spoon <i className="fa fa-spoon"></i></h1>
+      <img className="logo" src={process.env.PUBLIC_URL + '/logo.png'} />
+
 
         <nav className="nav_menu">
           <ul>

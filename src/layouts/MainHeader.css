@@ -1,30 +1,35 @@
-.MainHeader{
+.MainHeader {
   grid-column: 1 / 4;
     grid-row: 1;
-    color: ;
+    color: white;
     box-shadow: 0 1px 8px 0;
     box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
     color: white;
-    background: linear-gradient(262deg, #ff7854, #fe0f0fdb);
+    background: linear-gradient(315deg, #f5d020 0%, #f53803 74%);
     left:0;
     right:0;
     top:0;
    /* background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); */
   /* background: linear-gradient(135deg, #f6d365 0%, #fd267d 100%); */
-
       left:0;
       right:0;
       top:0;
 
-    display: flex;
-    flex-direction: row;
-    padding: 1rem;
+      display: flex;
+      flex-direction: row;
+      padding: 1rem;
+}
+.logo {
+  float: left;
+  margin: 0px 15px 0 0px;
+  width: 15%;
+  height: 0%;
+  display:inline-block;
 }
 
-
 .logo nav_menu{
-  margin-left: 50%;
-  margin-right: 50%;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 nav ul li {
