@@ -5,8 +5,8 @@ import SidebarContainer from './SidebarContainer';
 import SwipeContainer from './SwipeContainer';
 import Footer from '../components/Footer';
 import '../layouts/MainContainer.css';
-import Rater from 'react-rater'
-import 'react-rater/lib/react-rater.css'
+import Rater from 'react-rater' // for the star effect on rating
+import 'react-rater/lib/react-rater.css' // for the star effect on rating
 
 let randomNum= Math.floor(Math.random() * Math.floor(800))
 
@@ -36,7 +36,10 @@ class UserMain extends Component {
 //We also fetch for the specific user's likedRestaurants by grabbing their id after they log in - 2nd fetch
   componentDidMount(){
     fetch("http://localhost:3000/api/v1/restaurants")
-    .then(r=>r.json())
+    .then(r=> {
+      console.log('restaurants result: ', r);
+      return r.json()
+    })
     .then(fetchedRes=>{
       this.setState({
         restaurants:fetchedRes,
@@ -60,11 +63,10 @@ class UserMain extends Component {
       endIdx: this.state.endIdx +1,
       shortlist: this.state.restaurants.slice(newStart, newEnd)
     })
-  }
+  }//moves to the next card
 
+  //adds to the liked list and moves to the next card
   like=(e, restaurant)=>{
-    // create a post request page
-    console.log(e, restaurant)
     let newStart = this.state.startIdx +1
     let newEnd = this.state.endIdx +1
     this.setState({
@@ -73,7 +75,25 @@ class UserMain extends Component {
       shortlist: this.state.restaurants.slice(newStart, newEnd),
       likedRestaurants : [...this.state.likedRestaurants, restaurant]
     })
-  }
+    //post request to persist the liked restaurant to the user's matches - backend
+    // Match has a user_id and a restaurant id
+    //restauarant_id: restaurant.id, user_id: this.state.id
+    fetch("http://localhost:3000/api/v1/matches",{
+      method: "POST",
+      headers:{
+        "Content-Type":"application/json",
+        "Accept":"application/json"
+      },
+      body:JSON.stringify({
+        restaurant_id: restaurant.id,
+        user_id: this.state.id
+      })
+      }).then(r=> {
+      console.log('like result: ', r);
+      return r.json()
+      })
+      .then(match=>console.log(match))
+    }
 
   render () {
     return (
@@ -87,6 +107,7 @@ class UserMain extends Component {
       </div>
     )
   }
-}
+
+}//end of class 
 
 export default withRouter(UserMain);
