@@ -27,8 +27,10 @@ class SwipeCard extends Component {
       <h5>{this.props.restaurant[0].location1.display_address.join()}</h5>
       </div>
       <div className ="ButtonContainer">
-        <Button onClick={this.props.dislike} className="Dislike"> <i className="fa fa-close fa-2x" style={{color:"grey"}}></i></Button>
-        <Button onClick={(e)=> this.props.like(e,this.props.restaurant[0])}  className="Love"><i className="fa fa-heart fa-2x" style={{color:"red"}}></i></Button>
+        <Button
+          onClick={this.props.dislike} className="Dislike"> <i className="fa fa-close fa-2x" style={{color:"grey"}}></i></Button>
+        <Button
+          onClick={(e)=> this.props.like(e,this.props.restaurant[0])}  className="Love"><i className="fa fa-heart fa-2x" style={{color:"red"}}></i></Button>
       </div>
     </div>
   </div>

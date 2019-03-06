@@ -76,11 +76,6 @@ class MainContainer extends Component {
   }
 
   render () {
-    // if(this.state.loaded){
-    //   return null
-    // }else{
-    //  this.userUrl()
-    // }
     return (
     <div className="MainContainer">
     <Header />
@@ -88,7 +83,11 @@ class MainContainer extends Component {
       likedRestaurants={this.state.likedRestaurants}
       removeRest={this.removeRest}
       />
-    <SwipeContainer like={this.like} dislike={this.dislike} shortlist={this.state.shortlist}/>
+    <SwipeContainer
+      like={this.like}
+      dislike={this.dislike}
+      shortlist={this.state.shortlist}
+      />
     </div>
   )
   }
