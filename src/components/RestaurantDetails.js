@@ -18,13 +18,13 @@ class RestaurantDetails extends Component {
           <h4> Tags: {this.props.restaurant.tags.map(tag=>{
             return tag.alias}).join()}</h4>
           <h3> Address:{this.props.restaurant.location1.display_address} </h3>
-
-            <MyMap restaurant={this.props.restaurant}/><br/>
+            </div>
+            <MyMap className="map" restaurant={this.props.restaurant}/><br/>
             <button onClick={this.props.goBack} > Go back </button>
-        </div>
+
       </div>
     )
   }
-}//end of class 
+}//end of class
 
 export default RestaurantDetails;
