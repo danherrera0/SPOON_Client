@@ -26,6 +26,9 @@ class SwipeCard extends Component {
         return tag.alias}).join()}</h4>
       <h4>{this.props.restaurant[0].location1.display_address.join()}</h4>
       </div>
+
+
+
       <div className ="ButtonContainer">
         <Button onClick={this.props.dislike} className="Dislike">  Not My Taste  </Button>
         <Button onClick={(e)=> this.props.like(e,this.props.restaurant[0])}  className="Love"><i className="fa fa-heart fa-2x" style={{color:"red"}}></i></Button>

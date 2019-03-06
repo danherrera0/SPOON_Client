@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import Header from '../components/Header';
-import SidebarContainer from './SidebarContainer';
-import SwipeContainer from './SwipeContainer';
-import Footer from '../components/Footer';
-import '../layouts/MainContainer.css';
+// import Header from '../components/Header';
+// import SidebarContainer from './SidebarContainer';
+// import SwipeContainer from './SwipeContainer';
+import Deck from './Deck';
+// import Footer from '../components/Footer';
+// import '../layouts/MainContainer.css';
 import Rater from 'react-rater'
 import 'react-rater/lib/react-rater.css'
 
+import "../layouts/Deck.css";
 
 class MainContainer extends Component {
 
@@ -83,12 +85,15 @@ class MainContainer extends Component {
     // }
     return (
     <div className="MainContainer">
-    <Header />
-    <SidebarContainer
-      likedRestaurants={this.state.likedRestaurants}
-      removeRest={this.removeRest}
+
+
+    <Deck
+      like={this.like}
+      dislike={this.dislike}
+      shortlist={this.state.shortlist}
       />
-    <SwipeContainer like={this.like} dislike={this.dislike} shortlist={this.state.shortlist}/>
+
+
     </div>
   )
   }

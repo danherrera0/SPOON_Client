@@ -16,7 +16,7 @@ class App extends Component {
         <Route exact path="/spoon" component={MainContainer} />
 
       </Switch>
-      <Footer />
+    {/*}  <Footer /> */}
       </div>
     );
   }

@@ -3,15 +3,9 @@ import '../layouts/SwipeContainer.css';
 
 
 import Swipeable from "react-swipy";
+import { useSprings } from "react-spring/hooks";
+import { useGesture } from "react-with-gesture";
 import SwipeCard from "../components/SwipeCard"
-
-const wrapperStyles = { position: "relative", width: "300px", height: "350px" };
-const actionsStyles = {
-  display: "flex",
-  justifyContent: "space-between",
-  marginTop: 12
-};
-
 
 class SwipeContainer extends Component {
 
