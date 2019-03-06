@@ -1,4 +1,5 @@
 import React from "react";
+import '../layouts/SwipeContainer.css';
 
 const cardStyles = {
   background: "white",
@@ -16,7 +17,7 @@ const cardStyles = {
 };
 
 const Card = ({ zIndex = 0, children }) => (
-  <div style={{ ...cardStyles, zIndex }}>{children}</div>
+  <div className="SwipeCard" style={{ ...cardStyles, zIndex }}>{children}</div>
 );
 
 export default Card;
