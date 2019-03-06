@@ -23,13 +23,22 @@ class UserMain extends Component {
   }
 
   removeRest = (e, restaurant) => {
-    console.log(this.state.likedRestaurants)
-    console.log(restaurant.id);
     let newChosen = this.state.likedRestaurants.filter(likedRestaurant => likedRestaurant.id != restaurant.id)
     this.setState({
       likedRestaurants: newChosen
+    })//find the selected match on the backend via a get request to the user's matches
+    fetch("http://localhost:3000/api/v1/matches")
+    .then(r=> r.json())
+    .then(matches=>{
+      let foundMatch = matches.find(match =>{
+        return (match.restaurant.id===restaurant.id && match.user.id===parseInt(this.state.id))
+      })//delete the match from the backend 
+      console.log(foundMatch.id)
+      fetch(`http://localhost:3000/api/v1/matches/${foundMatch.id}`,{
+        method: "DELETE"
+      })
     })
-  }
+    }
 
 //we are faking auth with our login
 //here we fetch for restaurants from our backend - 1st fetch
@@ -108,6 +117,6 @@ class UserMain extends Component {
     )
   }
 
-}//end of class 
+}//end of class
 
 export default withRouter(UserMain);
