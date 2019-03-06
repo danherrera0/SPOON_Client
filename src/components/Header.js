@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
+import { withRouter, Link} from 'react-router-dom';
 
 import '../layouts/MainHeader.css'
 
@@ -10,7 +10,7 @@ class Header extends Component {
       <img className="logo" src={process.env.PUBLIC_URL + '/logo.png'} />
       <nav className="nav_menu">
         <ul>
-          <Link to = "/" className="logout"> Log out </Link>
+          <button onClick={()=>this.props.history.push('/')}>Log Out </button>
         </ul>
         </nav>
     </header>
@@ -18,4 +18,4 @@ class Header extends Component {
     }
   }
 
-export default Header;
+export default withRouter(Header);

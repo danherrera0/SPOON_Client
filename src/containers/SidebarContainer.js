@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import RestaurantCard from '../components/RestaurantCard'
 import SidebarHeader from '../components/SidebarHeader'
 import RestaurantDetails from '../components/RestaurantDetails'
-
 import '../layouts/SidebarContainer.css';
 
 class SidebarContainer extends Component {
@@ -11,6 +10,7 @@ class SidebarContainer extends Component {
     clicked:false,
     chosenRestaurant:{},
   }
+
   onClick=(e, restaurant)=>{
     this.setState({
       clicked:true,
@@ -25,28 +25,28 @@ class SidebarContainer extends Component {
   }
 
   render()  {
-  return (
-    <div className="SidebarContainer">
-    <div className="SidebarHeader">
-      <SidebarHeader/>
+    return (
+      <div className="SidebarContainer">
+      <div className="SidebarHeader">
+        <SidebarHeader/>
+        </div>
+        <div className="SideBar">
+        {(Object.keys(this.state.chosenRestaurant).length > 0)
+          ? <RestaurantDetails goBack={this.goBack} restaurant={this.state.chosenRestaurant}/>
+          :this.props.likedRestaurants.map(restaurant=>{
+            return (
+            <RestaurantCard
+            clickHandler={this.onClick}
+            removeRest={this.props.removeRest}
+            restaurant={restaurant}  />
+            )
+          })
+        }
+        </div>
       </div>
-      <div className="SideBar">
-      {(Object.keys(this.state.chosenRestaurant).length > 0)
-        ?
-        <RestaurantDetails goBack={this.goBack} restaurant={this.state.chosenRestaurant}/>
-        :
-        this.props.likedRestaurants.map(restaurant=>{
-        return (
-          <RestaurantCard
-          clickHandler={this.onClick}
-          removeRest={this.props.removeRest}
-          restaurant={restaurant}  />
-        )
-      })}
-      </div>
-    </div>
     )
-    }
   }
+
+}//end of class
 
 export default SidebarContainer;

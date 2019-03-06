@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {withRouter} from 'react-router-dom'
 import Header from '../components/Header';
 import SidebarContainer from './SidebarContainer';
 import SwipeContainer from './SwipeContainer';
@@ -7,16 +8,18 @@ import '../layouts/MainContainer.css';
 import Rater from 'react-rater'
 import 'react-rater/lib/react-rater.css'
 
+let randomNum= Math.floor(Math.random() * Math.floor(800))
 
-class MainContainer extends Component {
+class UserMain extends Component {
 
   state={
     restaurants:[],
     shortlist:[],
-    startIdx: 1,
-    endIdx: 2,
+    startIdx:randomNum ,
+    endIdx:randomNum+1,
     likedRestaurants:[],
     loaded:false,
+    id: this.props.match.params.id,
   }
 
   removeRest = (e, restaurant) => {
@@ -25,22 +28,12 @@ class MainContainer extends Component {
     let newChosen = this.state.likedRestaurants.filter(likedRestaurant => likedRestaurant.id != restaurant.id)
     this.setState({
       likedRestaurants: newChosen
-    });
-
+    })
   }
-    //after the user logs in, we get their user id to perform a fetch request for their matched restaurants
-    userUrl=()=>{
-      fetch(this.props.url)
-      .then(r=>r.json())
-      .then(user => {
-        this.setState({
-        likedRestaurants: user.restaurants,
-        loaded:true,
-        })
-        this.props.history.push(`/spoon`)
-      })
-    } //need to invoke userUrl
 
+//we are faking auth with our login
+//here we fetch for restaurants from our backend - 1st fetch
+//We also fetch for the specific user's likedRestaurants by grabbing their id after they log in - 2nd fetch
   componentDidMount(){
     fetch("http://localhost:3000/api/v1/restaurants")
     .then(r=>r.json())
@@ -48,6 +41,13 @@ class MainContainer extends Component {
       this.setState({
         restaurants:fetchedRes,
         shortlist:fetchedRes.slice(this.state.startIdx, this.state.endIdx)
+      })
+    })
+    fetch( `http://localhost:3000/api/v1/users/${this.state.id}`)
+    .then(r=>r.json())
+    .then(user=>{
+      this.setState({
+        likedRestaurants: user.restaurants,
       })
     })
   }
@@ -76,22 +76,17 @@ class MainContainer extends Component {
   }
 
   render () {
-    // if(this.state.loaded){
-    //   return null
-    // }else{
-    //  this.userUrl()
-    // }
     return (
-    <div className="MainContainer">
-    <Header />
-    <SidebarContainer
-      likedRestaurants={this.state.likedRestaurants}
-      removeRest={this.removeRest}
-      />
-    <SwipeContainer like={this.like} dislike={this.dislike} shortlist={this.state.shortlist}/>
-    </div>
-  )
+      <div className="MainContainer">
+      <Header />
+      <SidebarContainer
+        likedRestaurants={this.state.likedRestaurants}
+        removeRest={this.removeRest}
+        />
+      <SwipeContainer like={this.like} dislike={this.dislike} shortlist={this.state.shortlist}/>
+      </div>
+    )
   }
 }
 
-export default MainContainer;
+export default withRouter(UserMain);
