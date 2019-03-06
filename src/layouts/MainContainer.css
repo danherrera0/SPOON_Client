@@ -1,12 +1,10 @@
 .MainContainer{
-  padding: px;
   font-family: Avenir;
   display: grid;
   grid-template-columns: 1fr 1fr 0.75fr;
   grid-template-rows: auto;
   width: 100%;
   /* margin: 0 auto; */
-
 }
 
 *, *:before, *:after {

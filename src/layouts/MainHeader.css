@@ -11,25 +11,44 @@
     top:0;
    /* background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); */
   /* background: linear-gradient(135deg, #f6d365 0%, #fd267d 100%); */
-      left:0;
-      right:0;
-      top:0;
-
-      display: flex;
-      flex-direction: row;
-      padding: 1rem;
+    left:0;
+    right:0;
+    top:0;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    width:100%;
 }
+
 .logo {
-  float: left;
-  margin: 0px 15px 0 0px;
-  width: 15%;
-  height: 0%;
-  display:inline-block;
+animation-name: myAnimation;
+position: relative;
+width: 350px;
+height: 96px;
+background-color:none;
+left: 500px; top: 0px;
+animation-duration: 10s;
+animation-iteration-count:1;
+}
+
+@keyframes myAnimation{
+0% {
+  left: 0px; top: 0px;
+  }
+50% {
+  left: 400px; top: 0px;
+  transform:scale(1,1);
+  }
+
+100% {
+  left: 400px; top: 0px;
+  }
 }
 
 .logo nav_menu{
   margin-left: 50px;
   margin-right: 50px;
+  font-size: 10px;
 }
 
 nav ul li {
@@ -38,32 +57,35 @@ nav ul li {
   float: right;
 }
 
-
 .nav_menu ul {
   float: right;
   display: flex;
   width: 100%;
   flex-direction: row;
   margin-top: .5rem;
-
 }
 
 .nav_menu li {
   float: right;
-margin-left: 0.5rem;
+  margin-left: 0.5rem;
 }
 
 .nav_menu li:hover,
 .nav_menu li:focus {
   float: right;
-cursor: pointer;
-color: white;
+  cursor: pointer;
+  color: white;
 }
 
 .nav_menu a {
-padding: .5rem 1.5rem;
+  padding: .5rem 1.5rem;
+  font-size: 1 rem;
+  text-decoration: none;
+}
 
-font-size: 1 rem;
-
-text-decoration: none;
+.logout{
+  width:auto;
+  height:21px;
+  position: relative;
+  margin-left: 900px;
 }

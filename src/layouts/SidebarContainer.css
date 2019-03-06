@@ -77,3 +77,8 @@
     border-color: grey;
     padding: 2.5%;
 }
+
+.map{
+  border-color: black;
+  border-style: solid;
+}
