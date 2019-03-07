@@ -7,7 +7,6 @@ import Home from './Home'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
-
 class App extends Component {
   render() {
     return (
@@ -18,12 +17,9 @@ class App extends Component {
         <Route exact path="/spoon" component={MainContainer} />
         <Route exact path="/spoon/:id" component={UserMain} />
         <Route render={()=> <h2>NOT FOUND</h2>}/>
-
       </Switch>
-
-
       </div>
-    );
+    )
   }
 }
 

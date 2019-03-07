@@ -7,7 +7,6 @@ import '../layouts/MainContainer.css';
 import Rater from 'react-rater'
 import 'react-rater/lib/react-rater.css'
 
-
 class MainContainer extends Component {
 
   state={
@@ -20,26 +19,24 @@ class MainContainer extends Component {
   }
 
   removeRest = (e, restaurant) => {
-    console.log(this.state.likedRestaurants)
-    console.log(restaurant.id);
     let newChosen = this.state.likedRestaurants.filter(likedRestaurant => likedRestaurant.id != restaurant.id)
     this.setState({
       likedRestaurants: newChosen
-    });
-
+    })
   }
-    //after the user logs in, we get their user id to perform a fetch request for their matched restaurants
-    userUrl=()=>{
-      fetch(this.props.url)
-      .then(r=>r.json())
-      .then(user => {
-        this.setState({
-        likedRestaurants: user.restaurants,
-        loaded:true,
-        })
-        this.props.history.push(`/spoon`)
+
+  //after the user logs in, we get their user id to perform a fetch request for their matched restaurants
+  userUrl=()=>{
+    fetch(this.props.url)
+    .then(r=>r.json())
+    .then(user => {
+      this.setState({
+      likedRestaurants: user.restaurants,
+      loaded:true,
       })
-    } //need to invoke userUrl
+      this.props.history.push(`/spoon`)
+    })
+  } //need to invoke userUrl
 
   componentDidMount(){
     fetch("http://localhost:3000/api/v1/restaurants")
@@ -82,15 +79,15 @@ class MainContainer extends Component {
     <SidebarContainer
       likedRestaurants={this.state.likedRestaurants}
       removeRest={this.removeRest}
-      />
+    />
     <SwipeContainer
       like={this.like}
       dislike={this.dislike}
       shortlist={this.state.shortlist}
-      />
+    />
     <Footer/>
     </div>
-  )
+    )
   }
 }
 

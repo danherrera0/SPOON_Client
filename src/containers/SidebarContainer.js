@@ -38,14 +38,14 @@ class SidebarContainer extends Component {
             <RestaurantCard
             clickHandler={this.onClick}
             removeRest={this.props.removeRest}
-            restaurant={restaurant}  />
+            restaurant={restaurant} />
             )
           })
-        }
+        } 
         </div>
       </div>
     )
-  }
+  }//end of render
 
 }//end of class
 

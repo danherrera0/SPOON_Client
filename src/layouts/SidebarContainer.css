@@ -1,5 +1,4 @@
 .SidebarContainer{
-   /* overflow-y: scroll; */
   font-family: 'Open Sans', sans-serif;
   margin-left: 5%;
   margin-right: 5%;
@@ -15,6 +14,7 @@
   height:500px;
   width: 420px;
   overflow: scroll;
+  overflow-x: hidden;
 }
 
 .SideBar{
