@@ -7,8 +7,9 @@ const buttonStyles = {
   border: "none",
   borderRadius: 50,
   marginLeft:20,
-  marginRight:20,
+  marginRight:20
 };
+
 
 const Button = ({ children, onClick }) => (
   <button onClick={onClick} style={{ ...buttonStyles }}>

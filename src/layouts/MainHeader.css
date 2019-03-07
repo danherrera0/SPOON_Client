@@ -1,7 +1,9 @@
 .MainHeader {
-  grid-column: 1 / 4;
-    grid-row: 1;
-    color: white;
+
+  max-width: 100%;
+  grid-column: 1/ 4;
+  overflow:hidden;
+  grid-row: auto;
     box-shadow: 0 1px 8px 0;
     box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
     color: white;
@@ -16,7 +18,7 @@
 .logo {
 animation-name: myAnimation;
 position: relative;
-width: 350px;
+width: 300px;
 height: 96px;
 background-color:none;
 left: 500px; top: 0px;
@@ -38,9 +40,54 @@ animation-iteration-count:1;
   }
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d5a0d52ef3b052210bc4bffed29f18fd379cf91e
 .logout{
   width:auto;
   height:21px;
   position: relative;
   margin-left: 900px;
+<<<<<<< HEAD
+=======
+  background-color: transparent;
+  border-style: none;
+  color: white;
+  font-family: "Karla", Arial;
+
 }
+
+
+
+
+/*
+a.logout{
+position: relative;
+margin-left: 900px;
+background-color: white;
+ display:inline-block;
+ padding:0.7em 1.7em;
+ margin:0 0.3em 0.3em 0;
+ border-radius:0.2em;
+ box-sizing: border-box;
+ text-decoration:none;
+ font-family:'Karla',sans-serif;
+ font-weight:400;
+ color:#FFFFFF;
+ background-color:#3369ff;
+ box-shadow:inset 0 -0.6em 1em -0.35em rgba(0,0,0,0.17),inset 0 0.6em 2em -0.3em rgba(255,255,255,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+ text-align:center;
+ position:relative;
+>>>>>>> d5a0d52ef3b052210bc4bffed29f18fd379cf91e
+}
+a.logout:active{
+ box-shadow:inset 0 0.6em 2em -0.3em rgba(0,0,0,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+}
+
+@media all and (max-width:30em){
+ a.logout{
+  display:block;
+  margin:0.4em auto;
+  }
+} */

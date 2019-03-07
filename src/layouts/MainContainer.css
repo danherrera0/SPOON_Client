@@ -1,10 +1,20 @@
 .MainContainer{
-  font-family: Avenir;
-  display: grid;
-  grid-template-columns: 1fr 1fr 0.75fr;
-  grid-template-rows: auto;
   width: 100%;
+    max-width: 1440px;
+  max-width: 100%;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 0.75fr; */
+  grid-template-rows: auto;
   /* margin: 0 auto; */
+   overflow: hidden;
+
+
+   /* position:fixed;
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px; */
+  /* height: 100vh; */
 }
 
 *, *:before, *:after {
@@ -13,10 +23,10 @@
 
 body{
   background: #f5f7fa;
-  font-family: 'Oxygen', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-weight: 300;
   color:  #7d7d7d;
-  /* font-size: 15px; */
+  font-size: 15px;
 }
 
 h1, h2, h3{
@@ -60,10 +70,10 @@ a:hover{
   /* background-color: #707070;
   border-radius: 5px;
   grid-area: footer; */
-grid-column: 1 / 4;
+  grid-column: 1 / 4;
  background: #f4f8fb;
  color: #;
- padding: 2rem;
+ padding: 1rem;
  text-align: center;
  border-top: 4px solid rgba(0, 0, 0, 0.1);
 }
