@@ -88,6 +88,7 @@ class MainContainer extends Component {
       dislike={this.dislike}
       shortlist={this.state.shortlist}
       />
+    <Footer/>
     </div>
   )
   }

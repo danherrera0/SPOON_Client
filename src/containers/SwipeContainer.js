@@ -11,24 +11,23 @@ import Button from '../components/Button'
 import Rater from 'react-rater'
 import 'react-rater/lib/react-rater.css'
 
-const wrapperStyles = { position: "relative", width: "300px", height: "350px" }
+const wrapperStyles = { position: "relative", width: "275px", height: "400px" }
 
 
 const appStyles = {
 
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  width: "100%",
-  minHeight: "100vh",
-  fontFamily: "Avenir",
+  // display: "flex",
+  // justifyContent: "center",
+  // alignItems: "center",
+  // width: "100%",
+  // minHeight: "100vh"
 
 };
 
 const actionsStyles = {
-  display: "flex",
+  // display: "flex",
   justifyContent: "space-between",
-  marginTop: 12
+  marginTop: 25
 }
 
 class SwipeContainer extends Component {
@@ -59,7 +58,7 @@ class SwipeContainer extends Component {
       <div className="SwipeContainer">
         {this.props.shortlist.length > 0
           ?
-    <div style={appStyles}>
+    <div className= "appStyles">
     <div style={wrapperStyles}>
         {this.props.shortlist.length > 0 && (
         <div style={wrapperStyles}>
@@ -88,16 +87,18 @@ class SwipeContainer extends Component {
            >
 
         <Card>
-            <ul>
+
               <img className="RestImage" src = {this.props.shortlist[0].image}/>
                <h1 style = {{ color: "#f6d365"}}>{this.props.shortlist[0].name}</h1>
-              <h3><b> {this.props.shortlist[0].price}</b></h3>
+            <h3>{this.props.shortlist[0].price}</h3>
               <div className="react-rater-star"><b>Rating: <Rater total={5} rating={this.props.shortlist[0].rating} interactive={false}/></b></div>
-              <p> Tags: {this.props.shortlist[0].tags.map(tag=>{
-                return tag.alias}).join()}</p>
-              <p>{this.props.shortlist[0].location1.display_address.join()}</p>
-              </ul>
+              <span className="tags">   Tags: {this.props.shortlist[0].tags.map(tag=>{
+                return tag.alias}).join()}</span>
+              <p style = {{ textAlign: "center"}}>  {this.props.shortlist[0].location1.display_address.join()}</p>
+
+              <div className="paper"> </div>
       </Card>
+
       </Swipeable>
 
           {this.props.shortlist.length > 1 &&

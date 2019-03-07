@@ -9,7 +9,7 @@ class RestaurantDetails extends Component {
     return (
       <div>
         <div className="RestaurantDetails">
-          <h3>{this.props.restaurant.name}</h3>
+          <h2>{this.props.restaurant.name}</h2>
           <div className="resImg">
             <img src={this.props.restaurant.image} />
           </div>
@@ -17,10 +17,10 @@ class RestaurantDetails extends Component {
           <div className="react-rater-star"><b>Rating: <Rater total={5} rating={this.props.restaurant.rating} interactive={false}/></b></div>
           <h4> Tags: {this.props.restaurant.tags.map(tag=>{
             return tag.alias}).join()}</h4>
-          <h3> Address:{this.props.restaurant.location1.display_address} </h3>
+          <h3> Address: {this.props.restaurant.location1.display_address} </h3>
             </div>
             <MyMap className="map" restaurant={this.props.restaurant}/><br/>
-            <button onClick={this.props.goBack} > Go back </button>
+            <button className="goback" onClick={this.props.goBack} > Go back </button>
 
       </div>
     )

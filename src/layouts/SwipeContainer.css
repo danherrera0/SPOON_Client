@@ -1,4 +1,31 @@
 .SwipeContainer{
+  margin: 70px;
+  margin-bottom: 35%;
+  padding:2%;
+}
+
+.tags {
+  display: inline-block;
+  padding: 1em 1em 0.6em;
+  margin: 0;
+  padding: 0;
+}
+
+.paper {
+
+  position: relative;
+  /* z-index: -2; */
+  background: #fff;
+  box-shadow:
+    /* The top layer shadow */
+    0 1px 1px rgba(0,0,0,0.15),
+    /* The second layer */
+    0 10px 0 -5px #eee,
+    /* The second layer shadow */
+    0 10px 2px -4px rgba(0,0,0,0.15);
+
+    padding: 10px;
+    border-radius: 5px;
 
 }
 
@@ -7,6 +34,7 @@ h1{
 }
 .RestImage {
   background-size:100% 100%;
+
 }
 .SwipeCard{
   border-color: #f53803;
@@ -23,15 +51,17 @@ h1{
   background-color: white;
   box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
   1px 3px 8px rgba(39, 44, 49, 0.03);
-  margin: 20px;
-  top: 0;
-  padding:2%;
+
 }
 
 .RestImage {
-  width: 250px;
-  height: 200px;
-  border-radius: 15px;
+  overflow: hidden;
+  width: 275px;
+  height: 225px;
+  position: relative;
+display: block;
+border-top-right-radius: 8px;
+border-top-left-radius: 8px;
   box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
   1px 3px 8px rgba(39, 44, 49, 0.03);
 }

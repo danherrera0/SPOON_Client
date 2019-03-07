@@ -8,8 +8,6 @@ class Header extends Component {
   return (
     <header className="MainHeader">
       <img className="logo" src={process.env.PUBLIC_URL + '/logo.png'} />
-      <nav className="nav_menu">
-      </nav>
       <button className="logout" onClick={()=>this.props.history.push('/')}>Log Out </button>
     </header>
     )
