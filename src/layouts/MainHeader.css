@@ -6,18 +6,11 @@
     box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
     color: white;
     background: linear-gradient(315deg, #f5d020 0%, #f53803 74%);
-    left:0;
-    right:0;
-    top:0;
    /* background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); */
   /* background: linear-gradient(135deg, #f6d365 0%, #fd267d 100%); */
-    left:0;
-    right:0;
-    top:0;
     display: flex;
     flex-direction: row;
     padding: 1rem;
-    width:100%;
 }
 
 .logo {
@@ -43,44 +36,6 @@ animation-iteration-count:1;
 100% {
   left: 400px; top: 0px;
   }
-}
-
-.logo nav_menu{
-  margin-left: 50px;
-  margin-right: 50px;
-  font-size: 10px;
-}
-
-nav ul li {
-  list-style:none;
-  margin:0px;
-  float: right;
-}
-
-.nav_menu ul {
-  float: right;
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  margin-top: .5rem;
-}
-
-.nav_menu li {
-  float: right;
-  margin-left: 0.5rem;
-}
-
-.nav_menu li:hover,
-.nav_menu li:focus {
-  float: right;
-  cursor: pointer;
-  color: white;
-}
-
-.nav_menu a {
-  padding: .5rem 1.5rem;
-  font-size: 1 rem;
-  text-decoration: none;
 }
 
 .logout{
