@@ -17,7 +17,7 @@ const cardStyles = {
 };
 
 const Card = ({ zIndex = 0, children }) => (
-  <div className="SwipeCard" style={{ ...cardStyles, zIndex }}>{children}</div>
+  <div style={{ ...cardStyles, zIndex }}>{children}</div>
 );
 
 export default Card;

@@ -1,6 +1,6 @@
 .SidebarContainer{
   font-family: 'Open Sans', sans-serif;
-  margin-left: 7%;
+  margin-left: 5%;
   margin-right: 5%;
   margin-top: 5%;
   margin-bottom: 5%;
@@ -8,9 +8,12 @@
   grid-row: 2;
   background: white;
   color: grey;
-  padding: 2rem;
+  padding: 2%;
   box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
       1px 3px 8px rgba(39, 44, 49, 0.03);
+  height:500px;
+  width: 420px;
+  overflow: scroll;
 }
 
 .SideBar{
