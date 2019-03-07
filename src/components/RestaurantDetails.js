@@ -21,7 +21,6 @@ class RestaurantDetails extends Component {
             </div>
             <MyMap className="map" restaurant={this.props.restaurant}/><br/>
             <button className="goback" onClick={this.props.goBack} > Go back </button>
-
       </div>
     )
   }

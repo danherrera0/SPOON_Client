@@ -32,7 +32,7 @@ class UserMain extends Component {
     .then(matches=>{
       let foundMatch = matches.find(match =>{
         return (match.restaurant.id===restaurant.id && match.user.id===parseInt(this.state.id))
-      })//delete the match from the backend 
+      })//delete the match from the backend
       console.log(foundMatch.id)
       fetch(`http://localhost:3000/api/v1/matches/${foundMatch.id}`,{
         method: "DELETE"
@@ -111,7 +111,7 @@ class UserMain extends Component {
       <SidebarContainer
         likedRestaurants={this.state.likedRestaurants}
         removeRest={this.removeRest}
-        />
+      />
       <SwipeContainer like={this.like} dislike={this.dislike} shortlist={this.state.shortlist}/>
       </div>
     )

@@ -1,5 +1,3 @@
-// default Home Component
-// App Component will only be visible once user is authenticated
 import { BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 import {withRouter} from 'react-router-dom'
 import React, { Component } from 'react';
@@ -8,6 +6,9 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import './layouts/Home.css';
 
+//This is for the main landing page. A user can log in or sign up here.
+// If they log in successfully, they are redirected to "/Spoon/:id"
+// If they sign up , they are redirected to login page
 class Home extends Component {
 
   state={
@@ -52,6 +53,7 @@ class Home extends Component {
     this.setState({
       signup:true,
     })
+    this.props.history.push(`/`);
   }
 
   handleLogin=(e)=>{
@@ -74,10 +76,6 @@ class Home extends Component {
         return user.email === email && user.password === password
       })
       this.props.history.push(`/spoon/${user.id}`);
-      
-      // this.setState({
-      //   userUrl: `http://localhost:3000/api/v1/users/${user.id}`,
-      // })
     })
   }
 

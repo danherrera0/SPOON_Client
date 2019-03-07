@@ -3,22 +3,17 @@ import RestaurantDetails from "./RestaurantDetails"
 import Rater from 'react-rater'
 import 'react-rater/lib/react-rater.css'
 import '../layouts/SwipeContainer.css';
-
 import Swipeable from "react-swipy";
 import Button from './Button'
 
 class SwipeCard extends Component {
   render()  {
-    console.log(this.props);
-    console.log(this.props.restaurant[0].location1.display_address.join())
-    console.log(
-  )
-
+    // console.log(this.props);
+    // console.log(this.props.restaurant[0].location1.display_address.join())
   return (
     <div>
     <div>
       <div className="SwipeCard">
-
       <h1 style = {{ color: "#f6d365" }}>{this.props.restaurant[0].name}</h1>
       <img className="RestImage" src = {this.props.restaurant[0].image}/>
       <h3><b> {this.props.restaurant[0].price}</b></h3>
@@ -27,7 +22,6 @@ class SwipeCard extends Component {
         return tag.alias}).join()}</h4>
       <h5>{this.props.restaurant[0].location1.display_address.join()}</h5>
       </div>
-
       <div className ="ButtonContainer">
         <Button
           onClick={this.props.dislike} className="Dislike"> <i className="fa fa-close fa-2x" style={{color:"grey"}}></i></Button>
@@ -35,10 +29,9 @@ class SwipeCard extends Component {
           onClick={(e)=> this.props.like(e,this.props.restaurant[0])}  className="Love"><i className="fa fa-heart fa-2x" style={{color:"red"}}></i></Button>
       </div>
     </div>
-  </div>
-    )
-  }
-  }
-
+    </div>
+    )//end of render
+  }//end of render
+}//end of class
 
 export default SwipeCard;

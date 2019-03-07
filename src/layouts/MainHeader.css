@@ -1,48 +1,40 @@
 .MainHeader {
-
   max-width: 100%;
   grid-column: 1/ 4;
   overflow:hidden;
   grid-row: auto;
-    box-shadow: 0 1px 8px 0;
-    box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
-    color: white;
-    background: linear-gradient(315deg, #f5d020 0%, #f53803 74%);
-   /* background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); */
-  /* background: linear-gradient(135deg, #f6d365 0%, #fd267d 100%); */
-    /* left:0;
-    right:0;
-    top:0; */
-    display: flex;
-    flex-direction: row;
-    padding: 0.5rem;
+  box-shadow: 0 1px 8px 0;
+  box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+  color: white;
+  background: linear-gradient(315deg, #f5d020 0%, #f53803 74%);
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
 }
 
 .logo {
-animation-name: myAnimation;
-position: relative;
-width: 300px;
-height: 96px;
-background-color:none;
-left: 500px; top: 0px;
-animation-duration: 10s;
-animation-iteration-count:1;
+  animation-name: myAnimation;
+  position: relative;
+  width: 300px;
+  height: 96px;
+  background-color:none;
+  left: 500px; top: 0px;
+  animation-duration: 10s;
+  animation-iteration-count:1;
 }
 
 @keyframes myAnimation{
-0% {
-  left: 0px; top: 0px;
-  }
-50% {
-  left: 400px; top: 0px;
-  transform:scale(1,1);
-  }
-
-100% {
-  left: 400px; top: 0px;
-  }
+  0% {
+    left: 0px; top: 0px;
+    }
+  50% {
+    left: 400px; top: 0px;
+    transform:scale(1,1);
+    }
+  100% {
+    left: 400px; top: 0px;
+    }
 }
-
 
 .logout{
   width:auto;
@@ -53,38 +45,4 @@ animation-iteration-count:1;
   border-style: none;
   color: white;
   font-family: "Karla", Arial;
-
 }
-
-
-
-
-/*
-a.logout{
-position: relative;
-margin-left: 900px;
-background-color: white;
- display:inline-block;
- padding:0.7em 1.7em;
- margin:0 0.3em 0.3em 0;
- border-radius:0.2em;
- box-sizing: border-box;
- text-decoration:none;
- font-family:'Karla',sans-serif;
- font-weight:400;
- color:#FFFFFF;
- background-color:#3369ff;
- box-shadow:inset 0 -0.6em 1em -0.35em rgba(0,0,0,0.17),inset 0 0.6em 2em -0.3em rgba(255,255,255,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
- text-align:center;
- position:relative;
-}
-a.logout:active{
- box-shadow:inset 0 0.6em 2em -0.3em rgba(0,0,0,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
-}
-
-@media all and (max-width:30em){
- a.logout{
-  display:block;
-  margin:0.4em auto;
-  }
-} */

@@ -7,11 +7,11 @@ class Header extends Component {
   render()  {
   return (
     <header className="MainHeader">
-      <img className="logo" src={process.env.PUBLIC_URL + '/logo.png'} />
-      <button className="logout" onClick={()=>this.props.history.push('/')}>Log Out </button>
+    <img className="logo" src={process.env.PUBLIC_URL + '/logo.png'} />
+    <button className="logout" onClick={()=>this.props.history.push('/')}>Log Out </button>
     </header>
     )
-    }
   }
+}
 
 export default withRouter(Header);
