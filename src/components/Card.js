@@ -10,7 +10,7 @@ const cardStyles = {
   height: "400px",
   // cursor: "pointer",
   userSelect: "none",
-  // position: "absolute",
+  position: "relative",
   // display: "flex",
   // alignItems: "left",
   // justifyContent: "left",

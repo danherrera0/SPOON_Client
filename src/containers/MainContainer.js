@@ -7,14 +7,15 @@ import '../layouts/MainContainer.css';
 import Rater from 'react-rater'
 import 'react-rater/lib/react-rater.css'
 
+let randomNum= Math.floor(Math.random() * Math.floor(800))
 
 class MainContainer extends Component {
 
   state={
     restaurants:[],
     shortlist:[],
-    startIdx: 1,
-    endIdx: 2,
+    startIdx:randomNum ,
+    endIdx:randomNum+1,
     likedRestaurants:[],
     loaded:false,
   }
