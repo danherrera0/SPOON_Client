@@ -1,15 +1,17 @@
 # Spoon 
-In this repository, you will find the frontend for this project built with React JS. The Rails backend is located:[here](https://github.com/danherrera0/SPOON_Server)
 
+A Tinder-like swiping web app that matches users based on food preferences. Utilizing React, Yelp API, React-Spring-Hooks, Leaflet Maps API, Rails, Postgres
+
+In this repository, you will find the frontend for this project built with React JS. The Rails backend is located:[here](https://github.com/danherrera0/SPOON_Server)
 
 SEE OUR WEB APP IN ACTION, view the demo on YouTube: https://www.youtube.com/watch?v=OA4ye_u4Gfc
 
 ## 📌 Features:
 * 
 
-
 ## 🎯 Stretch Goals
 * Open Table API
+* Implement social authentication
 
 ## 🛠 Built With
 * [React](https://reactjs.org/) 
@@ -55,7 +57,6 @@ You will also see any lint errors in the console.
 ## 💻 Supporting Versions
 - Ruby 2.0.0, 2.1.x, 2.2.x, 2.3.x
 - React 
-
 
 ## 🤩 Contributing
 
