@@ -1,10 +1,44 @@
-
+# Spoon 
+In this repository, you will find the frontend for this project built with Javascript. The Rails backend is located:[here](https://github.com/harlangtv/astromdom_backend)
 
 
 SEE OUR WEB APP IN ACTION, view the demo on YouTube: https://www.youtube.com/watch?v=OA4ye_u4Gfc
 
-_____________________________________________________________________________________________________________________
-# Spoon
+## 📌 Features:
+* 
+
+
+## 🎯 Stretch Goals
+* Open Table API
+
+## 🛠 Built With
+* [React]( ) 
+* [Ruby on Rails](https://rubyonrails.org/) - The web framework used
+* [Postgres](https://www.sqlite.org/) - Database management
+
+## 📑 Installation Guide
+
+To get started, have the backend API running:
+
+
+
+Install all dependencies and necessary gems:
+
+`bundle install `
+
+This app uses Postgres, Create database scheme with migrations:
+
+` rake db:create`
+
+Seed database:
+
+` rake db:seed `
+
+Start local server:
+
+` rails s `
+
+Fork and clone the front end repo:
 
 In the project directory, you can run:
 
@@ -31,42 +65,21 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 💻 Supporting Versions
+- Ruby 2.0.0, 2.1.x, 2.2.x, 2.3.x
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 🤩 Contributing
 
-## Learn More
+Contributions are welcomed!  Fork, fix, then send a pull request.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Bug reports and pull requests are welcome on GitHub at [astrodom repo](https://github.com/diaaanek/astrodom_frontend), please open Issues to provide feedback.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## ✏️ Authors
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## 📗 License
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
