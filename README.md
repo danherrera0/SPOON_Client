@@ -1,5 +1,5 @@
 # Spoon 
-In this repository, you will find the frontend for this project built with Javascript. The Rails backend is located:[here](https://github.com/harlangtv/astromdom_backend)
+In this repository, you will find the frontend for this project built with React JS. The Rails backend is located:[here](https://github.com/danherrera0/SPOON_Server)
 
 
 SEE OUR WEB APP IN ACTION, view the demo on YouTube: https://www.youtube.com/watch?v=OA4ye_u4Gfc
@@ -12,15 +12,15 @@ SEE OUR WEB APP IN ACTION, view the demo on YouTube: https://www.youtube.com/wat
 * Open Table API
 
 ## 🛠 Built With
-* [React]( ) 
-* [Ruby on Rails](https://rubyonrails.org/) - The web framework used
-* [Postgres](https://www.sqlite.org/) - Database management
+* [React](https://reactjs.org/) 
+* [Ruby on Rails](https://rubyonrails.org/)
+* [Postgres](https://www.sqlite.org/) 
 
 ## 📑 Installation Guide
 
-To get started, have the backend API running:
+## (1)
 
-
+To get started, have the backend API running: [here](https://github.com/danherrera0/SPOON_Server)
 
 Install all dependencies and necessary gems:
 
@@ -28,17 +28,18 @@ Install all dependencies and necessary gems:
 
 This app uses Postgres, Create database scheme with migrations:
 
-` rake db:create`
+### ` rake db:create`
 
 Seed database:
 
-` rake db:seed `
+### ` rake db:seed `
 
 Start local server:
 
-` rails s `
+### ` rails s `
 
-Fork and clone the front end repo:
+
+## (2) Fork the front end repo
 
 In the project directory, you can run:
 
@@ -50,25 +51,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
 
 
 ## 💻 Supporting Versions
 - Ruby 2.0.0, 2.1.x, 2.2.x, 2.3.x
+- React 
 
 
 ## 🤩 Contributing
