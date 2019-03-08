@@ -16,3 +16,4 @@ const Card = ({ zIndex = 0, children }) => (
 )
 
 export default Card;
+// This page is for styling --- CSS --- the card functionality is in the SwipeContainer

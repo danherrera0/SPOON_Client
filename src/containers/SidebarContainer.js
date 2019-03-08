@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {withRouter} from 'react-router-dom'
 import RestaurantCard from '../components/RestaurantCard'
 import SidebarHeader from '../components/SidebarHeader'
 import RestaurantDetails from '../components/RestaurantDetails'
@@ -23,11 +24,33 @@ class SidebarContainer extends Component {
       chosenRestaurant:{}
     })
   }
+//
+//   getPosition =()=>{
+//     var options = {
+//     enableHighAccuracy: true,
+//     timeout: 5000,
+//     maximumAge: 0
+//     }
+//   function success(pos) {
+//     var crd = pos.coords;
+//     let latitude =  crd.latitude
+//     let longitude = crd.longitude
+//     let coordinates = [latitude, longitude]
+//   }
+//   function error(err) {
+//     console.warn(`ERROR(${err.code}): ${err.message}`);
+//   }
+//   navigator.geolocation.getCurrentPosition(success, error, options);
+// }
+
 
   render()  {
     return (
       <div className="SidebarContainer">
       <div className="SidebarHeader">
+        <div className="position">
+
+        </div>
         <SidebarHeader/>
         </div>
         <div className="SideBar">
@@ -41,7 +64,7 @@ class SidebarContainer extends Component {
             restaurant={restaurant} />
             )
           })
-        } 
+        }
         </div>
       </div>
     )
@@ -49,4 +72,4 @@ class SidebarContainer extends Component {
 
 }//end of class
 
-export default SidebarContainer;
+export default withRouter(SidebarContainer);

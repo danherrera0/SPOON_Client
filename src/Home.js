@@ -26,7 +26,7 @@ class Home extends Component {
   handleSubmit=(e)=>{
     e.preventDefault()
     console.log('handleSubmit');
-    fetch("http://localhost:3000/api/v1/users",{
+    fetch(`http://localhost:3000`,{
       method: "POST",
       headers:{
         "Content-Type":"application/json",
@@ -69,7 +69,7 @@ class Home extends Component {
 
   findUser=(email, password)=>{
     console.log("in findUser")
-    fetch( "http://localhost:3000/api/v1/users/")
+    fetch("http://localhost:3000/api/v1/users/")
     .then(r=>r.json())
     .then(users=>{
       let user= users.find(user =>{
@@ -99,7 +99,6 @@ class Home extends Component {
   }
 
   render() {
-    console.log(this.state.userUrl);
     return (
       <React.Fragment>
       <Header />

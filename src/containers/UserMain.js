@@ -12,6 +12,7 @@ let randomNum= Math.floor(Math.random() * Math.floor(800))
 
 class UserMain extends Component {
 
+
   state={
     restaurants:[],
     shortlist:[],
@@ -43,26 +44,26 @@ class UserMain extends Component {
 //we are faking auth with our login
 //here we fetch for restaurants from our backend - 1st fetch
 //We also fetch for the specific user's likedRestaurants by grabbing their id after they log in - 2nd fetch
-  componentDidMount(){
-    fetch("http://localhost:3000/api/v1/restaurants")
-    .then(r=> {
-      console.log('restaurants result: ', r);
-      return r.json()
+componentDidMount(){
+  fetch("http://localhost:3000/api/v1/restaurants")
+  .then(r=> {
+    console.log('restaurants result: ', r);
+    return r.json()
+  })
+  .then(fetchedRes=>{
+    this.setState({
+      restaurants:fetchedRes,
+      shortlist:fetchedRes.slice(this.state.startIdx, this.state.endIdx)
     })
-    .then(fetchedRes=>{
-      this.setState({
-        restaurants:fetchedRes,
-        shortlist:fetchedRes.slice(this.state.startIdx, this.state.endIdx)
-      })
+  })
+  fetch( `http://localhost:3000/api/v1/users/${this.state.id}`)
+  .then(r=>r.json())
+  .then(user=>{
+    this.setState({
+      likedRestaurants: user.restaurants,
     })
-    fetch( `http://localhost:3000/api/v1/users/${this.state.id}`)
-    .then(r=>r.json())
-    .then(user=>{
-      this.setState({
-        likedRestaurants: user.restaurants,
-      })
-    })
-  }
+  })
+}
 
   dislike=()=>{
     let newStart = this.state.startIdx +1
@@ -82,7 +83,7 @@ class UserMain extends Component {
       startIdx: this.state.startIdx +1,
       endIdx: this.state.endIdx +1,
       shortlist: this.state.restaurants.slice(newStart, newEnd),
-      likedRestaurants : [...this.state.likedRestaurants, restaurant]
+      likedRestaurants: [...this.state.likedRestaurants, restaurant]
     })
     //post request to persist the liked restaurant to the user's matches - backend
     // Match has a user_id and a restaurant id
@@ -98,24 +99,23 @@ class UserMain extends Component {
         user_id: this.state.id
       })
       }).then(r=> {
-      console.log('like result: ', r);
       return r.json()
       })
       .then(match=>console.log(match))
     }
 
-  render () {
-    return (
-      <div className="MainContainer">
-      <Header />
-      <SidebarContainer
-        likedRestaurants={this.state.likedRestaurants}
-        removeRest={this.removeRest}
-      />
-      <SwipeContainer like={this.like} dislike={this.dislike} shortlist={this.state.shortlist}/>
-      </div>
-    )
-  }
+    render () {
+      return (
+        <div className="MainContainer">
+        <Header />
+        <SidebarContainer
+          likedRestaurants={this.state.likedRestaurants}
+          removeRest={this.removeRest}
+          />
+        <SwipeContainer like={this.like} dislike={this.dislike} shortlist={this.state.shortlist}/>
+        </div>
+      )
+    }
 
 }//end of class
 

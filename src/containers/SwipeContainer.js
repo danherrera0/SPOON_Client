@@ -25,7 +25,7 @@ class SwipeContainer extends Component {
       this.props.like("7",this.props.shortlist[0])
     }
   }
-
+// 7 is in place of the event - for fun? 
   state={
     currentCard: 0,
     cards: this.props.shortlist
