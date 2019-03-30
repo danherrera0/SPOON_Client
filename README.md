@@ -62,9 +62,7 @@ You will also see any lint errors in the console.
 
 Contributions are welcomed!  Fork, fix, then send a pull request.
 
-Bug reports and pull requests are welcome on GitHub at [astrodom repo](https://github.com/diaaanek/astrodom_frontend), please open Issues to provide feedback.
-
-## ✏️ Authors
+Bug reports and pull requests are welcome on GitHub at [Spoon repo](https://github.com/diaaanek/SPOON_client), please open Issues to provide feedback.
 
 
 ## 📗 License
