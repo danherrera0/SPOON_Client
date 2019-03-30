@@ -20,7 +20,7 @@ SEE OUR WEB APP IN ACTION, view the demo on YouTube: https://www.youtube.com/wat
 
 ## 📑 Installation Guide
 
-## (1)
+## (1) Run API
 
 To get started, have the backend API running: [here](https://github.com/danherrera0/SPOON_Server)
 
