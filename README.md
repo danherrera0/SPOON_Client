@@ -4,9 +4,7 @@ A Tinder-like swiping web app that matches users based on food preferences. Util
 
 In this repository, you will find the frontend for this project built with React JS. The Rails backend is located:[here](https://github.com/danherrera0/SPOON_Server)
 
-SEE OUR WEB APP IN ACTION, view the demo on YouTube: https://www.youtube.com/watch?v=OA4ye_u4Gfc
-
-## 📌 Features:
+📌 TO SEE OUR WEB APP IN ACTION, view the [demo on YouTube](https://www.youtube.com/watch?v=OA4ye_u4Gfc)
 
 ### Dashboard Page
 ![Spoon1](https://raw.githubusercontent.com/diaaanek/SPOON_Client/master/public/spoon11.png)
@@ -19,57 +17,52 @@ SEE OUR WEB APP IN ACTION, view the demo on YouTube: https://www.youtube.com/wat
 * Implement social authentication
 
 ## 🛠 Built With
-* [React](https://reactjs.org/) 
+* [Javascript](https://www.javascript.com/) 
+* [React](https://reactjs.org/)
 * [Ruby on Rails](https://rubyonrails.org/)
 * [Postgres](https://www.sqlite.org/) 
 
 ## 📑 Installation Guide
 
-## (1) Run API
+In this repository, you will find the front-end for this project built with React JS. 
 
-To get started, have the backend API running: [here](https://github.com/danherrera0/SPOON_Server)
+The Rails/Postgres back-end is located: [here](https://github.com/danherrera0/SPOON_Server)
+
+Our API is live and running restaurant [data](https://spoon-server.herokuapp.com/api/v1/restaurants)
+
+### (1) Run API
+
+If you prefer to get started locally, fork and clone [this](https://github.com/danherrera0/SPOON_Server) repo to have the server up and running.
 
 Install all dependencies and necessary gems:
 
 `bundle install `
 
-This app uses Postgres, Create database scheme with migrations:
+This app uses Postgres, create database scheme with migrations:
 
-### ` rake db:create`
+ ` rake db:create`
 
 Seed database:
 
-### ` rake db:seed `
+` rake db:seed `
 
 Start local server:
 
-### ` rails s `
+ ` rails s `
 
 
-## (2) Fork the front end repo
+### (2) Fork the front end repo
 
-In the project directory, you can run:
+In the project directory, located:[here](https://github.com/diaaanek/SPOON_Client), you can run:
 
-### `npm start`
+  `npm i && npm start`
 
-Runs the app in the development mode.<br>
+Runs the app in the development mode.
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
 
-
-## 💻 Supporting Versions
+### 💻 Supporting Versions
 - Ruby 2.0.0, 2.1.x, 2.2.x, 2.3.x
 - React 
-
-## 🤩 Contributing
-
-Contributions are welcomed!  Fork, fix, then send a pull request.
-
-Bug reports and pull requests are welcome on GitHub at [Spoon repo](https://github.com/diaaanek/SPOON_client), please open Issues to provide feedback.
-
-
-## 📗 License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
