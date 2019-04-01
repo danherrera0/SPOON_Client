@@ -66,3 +66,13 @@ The page will reload if you make edits.<br>
 ### 💻 Supporting Versions
 - Ruby 2.0.0, 2.1.x, 2.2.x, 2.3.x
 - React 
+
+### 🤩 Contributing
+
+Contributions are welcomed!  Fork, fix, then send a pull request.
+
+Bug reports and pull requests are welcome on GitHub at [Spoon repo](https://github.com/diaaanek/SPOON_client), please open Issues to provide feedback.
+
+### 📗 License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
