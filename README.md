@@ -11,6 +11,8 @@ SEE OUR WEB APP IN ACTION, view the demo on YouTube: https://www.youtube.com/wat
 ### Dashboard Page
 ![Spoon1](https://raw.githubusercontent.com/diaaanek/SPOON_Client/master/public/spoon11.png)
 
+### My Plate
+![Spoon2](https://raw.githubusercontent.com/diaaanek/SPOON_Client/master/public/myplate.png)
 
 ## 🎯 Stretch Goals
 * Open Table API
