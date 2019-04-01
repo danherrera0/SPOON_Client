@@ -7,7 +7,10 @@ In this repository, you will find the frontend for this project built with React
 SEE OUR WEB APP IN ACTION, view the demo on YouTube: https://www.youtube.com/watch?v=OA4ye_u4Gfc
 
 ## 📌 Features:
-* 
+
+### Dashboard Page
+![Spoon1](https://raw.githubusercontent.com/diaaanek/candid/master/public/SPOON1.png)
+
 
 ## 🎯 Stretch Goals
 * Open Table API
