@@ -2,7 +2,7 @@
 
 A Tinder-like swiping web app that matches users based on food preferences. Utilizing React, Yelp API, React-Spring-Hooks, Leaflet Maps API, Rails, Postgres
 
-In this repository, you will find the frontend for this project built with React JS. The Rails backend is located: [here.](https://github.com/danherrera0/SPOON_Server)
+In this repository, you will find the frontend for this project built with React JS. The Rails backend is located: [here](https://github.com/danherrera0/SPOON_Server)
 
 📌 TO SEE OUR WEB APP IN ACTION, view the [demo on YouTube](https://www.youtube.com/watch?v=OA4ye_u4Gfc)
 
@@ -53,7 +53,7 @@ Start local server:
 
 ### (2) Fork the front end repo
 
-In the project directory, located:[here](https://github.com/diaaanek/SPOON_Client), you can run:
+In the project directory, located: [here](https://github.com/diaaanek/SPOON_Client), you can run:
 
   `npm i && npm start`
 
