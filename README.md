@@ -9,7 +9,7 @@ SEE OUR WEB APP IN ACTION, view the demo on YouTube: https://www.youtube.com/wat
 ## 📌 Features:
 
 ### Dashboard Page
-![Spoon1](https://raw.githubusercontent.com/diaaanek/SPOON_Client/master/public/spoon11.png)
+![Spoon1](https://raw.githubusercontent.com/diaaanek/SPOON_Client/master/public/spoon1.png)
 
 
 ## 🎯 Stretch Goals
