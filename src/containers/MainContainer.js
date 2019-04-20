@@ -1,95 +1,95 @@
-import React, { Component } from 'react';
-import Header from '../components/Header';
-import SidebarContainer from './SidebarContainer';
-import SwipeContainer from './SwipeContainer';
-import Footer from '../components/Footer';
-import '../layouts/MainContainer.css';
-import Rater from 'react-rater'
-import 'react-rater/lib/react-rater.css'
+import React, { Component } from "react";
+import Header from "../components/Header";
+import SidebarContainer from "./SidebarContainer";
+import SwipeContainer from "./SwipeContainer";
+import Footer from "../components/Footer";
+import "../layouts/MainContainer.css";
+import Rater from "react-rater";
+import "react-rater/lib/react-rater.css";
 
-
-let randomNum= Math.floor(Math.random() * Math.floor(800))
+let randomNum = Math.floor(Math.random() * Math.floor(800));
 
 class MainContainer extends Component {
-
-  state={
-    restaurants:[],
-    shortlist:[],
-    startIdx:randomNum ,
-    endIdx:randomNum+1,
-    likedRestaurants:[],
-    loaded:false,
-  }
+  state = {
+    restaurants: [],
+    shortlist: [],
+    startIdx: randomNum,
+    endIdx: randomNum + 1,
+    likedRestaurants: [],
+    loaded: false
+  };
 
   removeRest = (e, restaurant) => {
-    let newChosen = this.state.likedRestaurants.filter(likedRestaurant => likedRestaurant.id != restaurant.id)
+    let newChosen = this.state.likedRestaurants.filter(
+      likedRestaurant => likedRestaurant.id != restaurant.id
+    );
     this.setState({
       likedRestaurants: newChosen
-    })
-  }
+    });
+  };
 
   //after the user logs in, we get their user id to perform a fetch request for their matched restaurants
-  userUrl=()=>{
+  userUrl = () => {
     fetch(this.props.url)
-    .then(r=>r.json())
-    .then(user => {
-      this.setState({
-      likedRestaurants: user.restaurants,
-      loaded:true,
-      })
-      this.props.history.push(`/spoon`)
-    })
-  } //need to invoke userUrl
+      .then(r => r.json())
+      .then(user => {
+        this.setState({
+          likedRestaurants: user.restaurants,
+          loaded: true
+        });
+        this.props.history.push(`/spoon`);
+      });
+  }; //need to invoke userUrl
 
-  componentDidMount(){
-    fetch("http://localhost:3000/api/v1/restaurants")
-    .then(r=>r.json())
-    .then(fetchedRes=>{
-      this.setState({
-        restaurants:fetchedRes,
-        shortlist:fetchedRes.slice(this.state.startIdx, this.state.endIdx)
-      })
-    })
+  componentDidMount() {
+    fetch("https://spoon-server.herokuapp.com/api/v1/restaurants")
+      .then(r => r.json())
+      .then(fetchedRes => {
+        this.setState({
+          restaurants: fetchedRes,
+          shortlist: fetchedRes.slice(this.state.startIdx, this.state.endIdx)
+        });
+      });
   }
 
-  dislike=()=>{
-    let newStart = this.state.startIdx +1
-    let newEnd = this.state.endIdx +1
+  dislike = () => {
+    let newStart = this.state.startIdx + 1;
+    let newEnd = this.state.endIdx + 1;
     this.setState({
-      startIdx: this.state.startIdx +1,
-      endIdx: this.state.endIdx +1,
+      startIdx: this.state.startIdx + 1,
+      endIdx: this.state.endIdx + 1,
       shortlist: this.state.restaurants.slice(newStart, newEnd)
-    })
-  }
+    });
+  };
 
-  like=(e, restaurant)=>{
+  like = (e, restaurant) => {
     // create a post request page
-    console.log(e, restaurant)
-    let newStart = this.state.startIdx +1
-    let newEnd = this.state.endIdx +1
+    console.log(e, restaurant);
+    let newStart = this.state.startIdx + 1;
+    let newEnd = this.state.endIdx + 1;
     this.setState({
-      startIdx: this.state.startIdx +1,
-      endIdx: this.state.endIdx +1,
+      startIdx: this.state.startIdx + 1,
+      endIdx: this.state.endIdx + 1,
       shortlist: this.state.restaurants.slice(newStart, newEnd),
-      likedRestaurants : [...this.state.likedRestaurants, restaurant]
-    })
-  }
+      likedRestaurants: [...this.state.likedRestaurants, restaurant]
+    });
+  };
 
-  render () {
+  render() {
     return (
-    <div className="MainContainer">
-    <Header />
-    <SidebarContainer
-      likedRestaurants={this.state.likedRestaurants}
-      removeRest={this.removeRest}
-      />
-    <SwipeContainer
-      like={this.like}
-      dislike={this.dislike}
-      shortlist={this.state.shortlist}
-      />
-    </div>
-  )
+      <div className="MainContainer">
+        <Header />
+        <SidebarContainer
+          likedRestaurants={this.state.likedRestaurants}
+          removeRest={this.removeRest}
+        />
+        <SwipeContainer
+          like={this.like}
+          dislike={this.dislike}
+          shortlist={this.state.shortlist}
+        />
+      </div>
+    );
   }
 }
 

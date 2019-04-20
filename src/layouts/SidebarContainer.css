@@ -1,107 +1,105 @@
-.SidebarContainer{
-  font-family: 'Open Sans', sans-serif;
+.SidebarContainer {
+  font-family: "Quicksand", sans-serif;
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 5%;
   margin-bottom: 5%;
-   grid-column: 1;
+  grid-column: 1;
   grid-row: 2;
   background: white;
   color: grey;
   padding: 2%;
   box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
-      1px 3px 8px rgba(39, 44, 49, 0.03);
-  height:500px;
+    1px 3px 8px rgba(39, 44, 49, 0.03);
+  height: 500px;
   width: 420px;
   overflow: scroll;
   overflow-x: hidden;
 }
 
-.SideBar{
-  width:400px;
-
+.SideBar {
+  width: 400px;
 }
 
 .leaflet-container {
-    height: 250px;
-    width: 100%;
-    margin: 0 auto;
+  height: 250px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-#img-profile{
+#img-profile {
   width: 65px;
   height: 65px;
   border: 0px solid #cccccc;
   box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
-      1px 3px 8px rgba(39, 44, 49, 0.03);
+    1px 3px 8px rgba(39, 44, 49, 0.03);
 }
 
-.img-circle{
+.img-circle {
   border-radius: 50%;
 }
 
-.showDetailsBut{
-    background-image: linear-gradient(top, #f4f1ee, #fff);
-    	border-radius: 50%;
-  	cursor: pointer;
-  	display: inline-block;
-  	height: 2.5rem;
-  	/* line-height: 3.6rem; */
-  	margin: 15px;
-  	position: relative;
-  	text-align: center;
-  	width: 2.5em;
-  }
+.showDetailsBut {
+  background-image: linear-gradient(top, #f4f1ee, #fff);
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  height: 2.5rem;
+  /* line-height: 3.6rem; */
+  margin: 15px;
+  position: relative;
+  text-align: center;
+  width: 2.5em;
+}
 
+.showDetailsBut:hover {
+  /* background-color: red; */
+}
 
-  .showDetailsBut:hover {
-	/* background-color: red; */
-  }
-
-.RestaurantCard{
+.RestaurantCard {
   background: white;
-   border-left: 1em solid #8a8a8a;
-   border-color: #f53803;
-   border-radius: 0.5rem;
-   box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
-   display: flex;
-   justify-content: space-between;
-   padding: 10px;
-   margin-bottom: 5%;
+  border-left: 1em solid #8a8a8a;
+  border-color: #f53803;
+  border-radius: 0.5rem;
+  box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 5%;
 
-
-   width: 370px;
-   height: 95px;
+  width: 370px;
+  height: 95px;
 }
 
 .RestaurantDetails img {
-    width: 150px;
-    height: 150px;
-    border-radius: 80px;
-    border-style: double;
-    border-width: thick;
-    border-color: grey;
-    padding: 2.5%;
+  width: 150px;
+  height: 150px;
+  border-radius: 80px;
+  border-style: double;
+  border-width: thick;
+  border-color: grey;
+  padding: 2.5%;
 }
 
-.map{
+.map {
   border-color: black;
   border-style: solid;
 }
 
 .goback {
-    position: relative;
-    display: inline-block;
-    padding: 0.25em 0.5em;
-    color: #FFF;
-    background: #fd9535;
-    border-bottom: solid 2px #d27d00;
-    border-radius: 5px;
-    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
-    font-weight: bold;
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 0.5em;
+  color: #fff;
+  background: #fd9535;
+  border-bottom: solid 2px #d27d00;
+  border-radius: 5px;
+  /* box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2),
+    0 2px 2px rgba(0, 0, 0, 0.19); */
+  font-weight: bold;
 }
 
 .goback:active {
-    border-bottom: solid 2px #fd9535;
-    box-shadow: 0 1 2px rgba(0, 0, 0, 0.30);
+  border-bottom: solid 2px #fd9535;
+  box-shadow: 0 1 2px rgba(0, 0, 0, 0.3);
 }

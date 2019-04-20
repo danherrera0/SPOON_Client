@@ -1,7 +1,7 @@
 .MainHeader {
   max-width: 100%;
   grid-column: 1/ 4;
-  overflow:hidden;
+  overflow: hidden;
   grid-row: auto;
   box-shadow: 0 1px 8px 0;
   box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
@@ -9,7 +9,7 @@
   background: linear-gradient(315deg, #f5d020 0%, #f53803 74%);
   display: flex;
   flex-direction: row;
-  padding: 1rem;
+  padding: 0rem;
 }
 
 .logo {
@@ -17,28 +17,32 @@
   position: relative;
   width: 300px;
   height: 96px;
-  background-color:none;
-  left: 500px; top: 0px;
+  background-color: none;
+  left: 500px;
+  top: 0px;
   animation-duration: 10s;
-  animation-iteration-count:1;
+  animation-iteration-count: 1;
 }
 
-@keyframes myAnimation{
+@keyframes myAnimation {
   0% {
-    left: 0px; top: 0px;
-    }
+    left: 0px;
+    top: 0px;
+  }
   50% {
-    left: 400px; top: 0px;
-    transform:scale(1,1);
-    }
+    left: 400px;
+    top: 0px;
+    transform: scale(1, 1);
+  }
   100% {
-    left: 400px; top: 0px;
-    }
+    left: 400px;
+    top: 0px;
+  }
 }
 
-.logout{
-  width:auto;
-  height:21px;
+.logout {
+  width: auto;
+  height: 21px;
   position: relative;
   margin-left: 900px;
   background-color: transparent;
